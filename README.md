@@ -13,7 +13,6 @@
 * ica2
 * [ica3](ica/ica3a.html)
 * [ica3 p2](ica//ica3-part2/index.html)
-
 * ica4
 * ica5
 * ica6
@@ -28,8 +27,8 @@
 * ica15
 
 ## weekly assignments: 
-* wa1
-* wa2
+* [wa1 ](wa/wa1.html)
+* [wa2 ](wa/wa2.html)
 * wa3
 * wa4
 * wa5

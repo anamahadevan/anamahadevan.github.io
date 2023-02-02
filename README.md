@@ -11,8 +11,8 @@
 ## in-class assingments:
 * [ica1](https://docs.google.com/document/d/15EPhaM7IeliXMuuJs00CyBdzzLgC-jN4Yqa44iOBdj0/edit?usp=sharing)
 * [ica2](https://docs.google.com/document/d/169MR_Vl_k5d7mL8-MEoeVV45ohrbcvjF0X6RIxwM-Ig/edit?usp=sharing)
-* [ica3](ica/ica3a.html)
-* [ica3 p2](ica/ica3-part2/index.html)
+* [ica3](https://anamahadevan.github.io/ica/ica3a)
+* [ica3-part2](https://anamahadevan.github.io/ica/ica3-part2/)
 * ica4
 * ica5
 * ica6
@@ -27,9 +27,9 @@
 * ica15
 
 ## weekly assignments: 
-* [wa1 ](wa/wa1.html)
-* [wa2 ](wa/wa2.html)
-* wa3
+* [wa1](https://anamahadevan.github.io/wa/wa1)
+* [wa2](https://anamahadevan.github.io/wa/wa2)
+* [wa3](https://anamahadevan.github.io/wa/wa3.html)
 * wa4
 * wa5
 * wa6

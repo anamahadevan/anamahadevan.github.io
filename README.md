@@ -9,8 +9,8 @@
 * css
 
 ## in-class assingments:
-* ica1 
-* ica2
+* [ica1](https://docs.google.com/document/d/15EPhaM7IeliXMuuJs00CyBdzzLgC-jN4Yqa44iOBdj0/edit?usp=sharing)
+* [ica2](https://docs.google.com/document/d/169MR_Vl_k5d7mL8-MEoeVV45ohrbcvjF0X6RIxwM-Ig/edit?usp=sharing)
 * [ica3](ica/ica3a.html)
 * [ica3 p2](ica//ica3-part2/index.html)
 * ica4

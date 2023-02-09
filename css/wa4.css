@@ -41,8 +41,8 @@ body {
   .card footer p
   {
     margin: 0;
-    font-size: 1.5em;
-    line-height: 2;
+    font-size: 1.75em;
+    /* line-height: 2; */
   }
   
   .card header h2{
@@ -50,6 +50,8 @@ body {
     line-height: 1.5;
     margin: 0;
   }
+
+  
 
   /* the article itself */
   
@@ -72,6 +74,11 @@ body {
     color: rgba(255,255,255,0.8);
   }
 
+
+
+  
+
+  /* CARD #2 */
 
   .card2
   {
@@ -103,11 +110,10 @@ body {
   .card2 footer p
   {
     margin: 0;
-    font-size: 1.5em;
-    line-height: 2;
+    font-size: 1.65em;
   }
   
-  .card header h2{
+  .card2 header h2{
     font-size: 2em;
     line-height: 1.5;
     margin: 0;

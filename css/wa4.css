@@ -47,7 +47,7 @@ body {
   
   .card header h2{
     font-size: 2em;
-    line-height: 1.5;
+    line-height: 1.75;
     margin: 0;
   }
 
@@ -88,6 +88,7 @@ body {
     background-color: plum;
     border: 0.2em solid purple;
     border-radius: 1.5em;
+    font-family:'Times New Roman', Times, serif;
   }
 
   .card2 header
@@ -115,7 +116,7 @@ body {
   
   .card2 header h2{
     font-size: 2em;
-    line-height: 1.5;
+    line-height: 1.75;
     margin: 0;
   }
 

@@ -1,5 +1,5 @@
 .container {
-    position: relative;
+    position: absolute;
     width: 100%; 
   }
   
@@ -14,7 +14,20 @@
     padding-right: 20px;
   }
 
-  p.text-with-bg-img {
-    background-image: url(../img/bmo2.jpg);
-    background-size: cover; /* or contain */
+.parent {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .image1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    
+  }
+  .image2 {
+    position: absolute;
+    top: 0em;
+    left: 0em;
+    border: 1px green solid;
 }

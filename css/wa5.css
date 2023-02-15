@@ -6,8 +6,8 @@
   /* Bottom right text */
   .text-block {
     position: absolute;
-    bottom: 40px;
-    right: 40px;
+    bottom: 140px;
+    right: 140px;
     background-color: black;
     color: white;
     padding-left: 20px;
@@ -27,7 +27,7 @@
   }
   .image2 {
     position: absolute;
-    width: 30%;
+    width: 25%;
     height: 25%;
     top: 0em;
     left: 0em;

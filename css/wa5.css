@@ -13,3 +13,8 @@
     padding-left: 20px;
     padding-right: 20px;
   }
+
+  .text-with-bg-img {
+    background-image: url(../img/bmo2.jpg);
+    background-size: cover; /* or contain */
+}

@@ -1,12 +1,13 @@
 .container {
     position: relative;
+    width: 100%; 
   }
   
   /* Bottom right text */
   .text-block {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 40px;
+    right: 40px;
     background-color: black;
     color: white;
     padding-left: 20px;

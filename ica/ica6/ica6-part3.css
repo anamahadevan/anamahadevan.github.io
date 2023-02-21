@@ -1,12 +1,12 @@
-.narrowScreen{
+#narrowScreen{
     background-color: green;
 }
-.wideScreen{
+#wideScreen{
     background-color: red;
 }
-.shortScreen{
+#shortScreen{
     background-color: turquoise;
 }
-.tallScreen{
+#tallScreen{
     background-color: lavender;
 }

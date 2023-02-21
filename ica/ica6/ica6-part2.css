@@ -1,39 +1,54 @@
-.body{
+body{
     background-color: olive;
 }
-.flex-parent{
+
+
+#flex-parent{
     display:flex;
     background-color: orangered;
 }
-.flex-parent p{
+#flex-parent p{
     padding:5vw;
 }
-.grid-parent{
+
+
+#grid-parent{
     display:grid;
 }
-.grid-parent h1{
+
+#grid-parent h1{
     background-color: grey;
     padding:3vw 5vh;
     margin:5vw;
     
 }
-.no0{
+#no0{
+
 }
-.no1{
+#no1{
+
 }
-.no2{
+#no2{
+
 }
-.no3{
+#no3{
+
 }
-.no4{
+#no4{
+
 }
-.no5{
+#no5{
+
 }
-.no6{
+#no6{
+
 }
-.no7{
+#no7{
+
 }
-.no8{
+#no8{
+
 }
-.no9{
+#no9{
+
 }

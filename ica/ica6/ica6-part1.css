@@ -1,7 +1,7 @@
-.body{
+body{
     background-color: beige;
 }
-.box1{
+#box1{
     border-style:solid;
     width: 40vw;
     height: 33vh;
@@ -11,9 +11,11 @@
     background-color: mediumseagreen;
     position:relative;
 }
-.box2{
+
+#box2{
     width: 73vw;
     height: 33vh;
+
     border-style: solid;
     border-radius:3px;
     border-color:purple;
@@ -21,7 +23,8 @@
     left: 40vw;
     background-color: mediumvioletred;
 }
-.box3{
+
+#box3{
 position: sticky;
 width: 73vw;
 height: 175vh;

@@ -15,7 +15,7 @@
 * [ica3-part2](https://anamahadevan.github.io/ica/ica3-part2/)
 * [ica4](https://anamahadevan.github.io/ica/ica4)
 * [ica5](https://anamahadevan.github.io/ica/ica5)
-* ica6
+* [ica6-part1](https://anamahadevan.github.io/ica/ica6-part1)
 * ica7
 * ica8
 * ica9
@@ -32,7 +32,7 @@
 * [wa3](https://anamahadevan.github.io/wa/wa3)
 * [wa4](https://anamahadevan.github.io/wa/wa4)
 * [wa5](https://anamahadevan.github.io/wa/wa5)
-* wa6
+* [wa6](https://anamahadevan.github.io/wa/wa6)
 * wa7
 * wa8
 * wa9

@@ -1,1 +1,12 @@
-Unauthorized
+.narrowScreen{
+    background-color: green;
+}
+.wideScreen{
+    background-color: red;
+}
+.shortScreen{
+    background-color: turquoise;
+}
+.tallScreen{
+    background-color: lavender;
+}

@@ -10,7 +10,20 @@ body{
 #flex-parent p{
     padding:5vw;
 }
+#flex-child{
 
+}
+#flex-child2{
+    
+}
+
+#flex-child3{
+    
+}
+
+#flex-child4{
+    
+}
 
 #grid-parent{
     display:grid;

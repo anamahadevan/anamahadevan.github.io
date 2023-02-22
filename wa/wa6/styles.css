@@ -1,3 +1,5 @@
+@media only screen and (min-width:500px){
+
 body {
     background-color: #fff;
     color: #333;
@@ -43,16 +45,18 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     max-width: 980px;
-    grid-template-columns: [first] 75% [line2] 25% [end];
+    grid-template-columns: [article] 75% [gallery] 25% [end];
+    column-gap: 7%;
   }
 
   article {
-    float:left;
+    float:right;
+    word-wrap: break-word;
   }
 
   .feature {
     width: 200px;
-    overflow-wrap: break-word;
+    float:left;
   }
 
   aside {
@@ -62,10 +66,25 @@ body {
   .photos {
     display:grid;
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 1px;
+    row-gap: 1px;
     float: right;  
     list-style: none;
     margin: 0;
     padding: 0;
   }
+
+}
   
 
+  @media only screen and (max-width:500px){
+    .grid {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0 20px;
+        max-width: 980px;
+        /* grid-template-columns: [article] 75% [gallery] 25% [end];
+        column-gap: 7%; */
+      }
+  }

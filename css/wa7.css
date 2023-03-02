@@ -30,10 +30,12 @@ nav a{
 img{
     width:30vw;
     height: 30vh;
+    transition: width 2s, height 4s;
 }
 
-#nav1:hover{
-    background-color: purple;
+img:hover{
+    opacity:40%;
+    transform: rotate(180deg);   
 }
 
 #red-ball{

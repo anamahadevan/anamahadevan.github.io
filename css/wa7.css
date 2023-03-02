@@ -30,7 +30,7 @@ nav a{
 img{
     width:30vw;
     height: 30vh;
-    transition: width 2s, height 4s;
+    transition: opacity 2s, transform 4s;
 }
 
 img:hover{

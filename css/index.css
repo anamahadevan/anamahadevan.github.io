@@ -168,23 +168,19 @@ body {
 	height:794.5px;
 	position:absolute;
 	left:78px;
-	top:2309.321533203125px;
+	top:2310px;
 }
 
 .about_me h2 { 
-	color:rgba(0, 0, 0, 1);
 	width:587px;
 	height:45px;
 	position:absolute;
-	left:0px;
-	top:0px;
 	text-align:left;
 	font-size:45px;
 	letter-spacing:0;
 }
 
 #about_me { 
-	color:rgba(0, 0, 0, 1);
 	width:535px;
 	height:447.9579162597656px;
 	position:absolute;
@@ -244,7 +240,6 @@ body {
 	top:3485.482177734375px;
 }
 .contact h2 { 
-	color:rgba(0, 0, 0, 1);
 	width:660px;
 	height:59px;
 	position:absolute;

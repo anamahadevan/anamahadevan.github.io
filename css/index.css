@@ -206,14 +206,11 @@ body {
 	top:744px;
 }
 
-#scroll_content { 
-	/* position:absolute; */
+.scroll_abilities p { 
 	display: block;
-	width: 100%;
+	width: 300%;
   	transform: translateX(100%);
-	animation: move 30s linear infinite 
-	text-align:left;
-	font-size:24px;
+	animation: move 90s linear infinite 
 }
 
 @keyframes move {

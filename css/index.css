@@ -18,8 +18,8 @@ body {
 /* ---------NAV BAR----------  */
 
 .navbar { 
-	position: -webkit-sticky;
-    position: sticky;
+	/* position: -webkit-sticky;
+    position: sticky; */
     top: 0;
     padding: .5em;
 
@@ -272,14 +272,11 @@ body {
         flex-direction: column;
         margin: 0 auto;
         padding: 0 20px;
-        max-width: 980px;
-        /* grid-template-columns: [article] 75% [gallery] 25% [end];
-        column-gap: 7%; */
       }
 
       nav ul {
-        display: grid;
-        grid-template-columns: repeat(1, 5fr);
+        display: flex;
+        grid-template-columns: repeat(1, 3fr);
         margin: 0;
         padding: 0;
         list-style: none;

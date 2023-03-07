@@ -1,9 +1,7 @@
 /* 
 code issues to fix:
-css efficiency ( add flexboxes)
 media screen
 missing front star??
-linking portfolio
 move intro text further from photos?
 sticky logo in left corner?
  linking ids down from nav bar
@@ -26,11 +24,8 @@ body {
 /* ---------NAV BAR----------  */
 
 .navbar { 
-	/* position: -webkit-sticky;
-    position: sticky; */
     top: 0;
     padding: .5em;
-
 }
 .navbar ul{
 	display: flex;
@@ -47,7 +42,7 @@ body {
 	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
 	width:100%;
 	height:auto;
-	position:absolute;
+	/* position:absolute; */
 	left:19px;
 	top:19px;
 }
@@ -72,16 +67,17 @@ body {
 	top:202px;
 }
 #backstar { 
-	width:70%;
-	height:auto%;
-	position:absolute;
+	width:50%;
+	height:auto;
+	position:relative;
 	right:250px;
 	top:10px;
+	justify-content: left;
 }
 
 #photo2 { 
 	width:360px;
-	height:338px;
+	height:auto;
 	position:absolute;
 	left:999px;
 	top:115px;
@@ -89,7 +85,7 @@ body {
 #frontstar { 
 	transform: rotate(-20.61102287099412deg);
 	width:100px;
-	height:100px;
+	height:auto;
 	position:absolute;
 	left:1100px;
 	top:67px;
@@ -98,7 +94,7 @@ body {
 #photo1 { 
 	background-color:rgba(196.00000351667404, 196.00000351667404, 196.00000351667404, 1);
 	width:465px;
-	height:369px;
+	height:auto;
 	position:absolute;
 	left:777px;
 	top:295px;
@@ -111,13 +107,13 @@ body {
 	background-size:cover;
 }
 
-#howdy { 
+.heroposition p { 
 	color:rgba(40.37499949336052, 40.37499949336052, 40.37499949336052, 1);
-	width:682px;
-	height:824px;
-	position:absolute;
+	width:100%;
+	height:auto;
+	/* position:absolute; */
 	left:115px;
-	top:54px;
+	top: 2px;;
 	font-family:Abhaya Libre;
 	text-align:left;
 	font-size:69px;
@@ -276,18 +272,18 @@ body {
 
 @media only screen and (max-width:500px){
     .workgrid {
-       background-color: aquamarine;
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      nav ul {
-        display: flex;
+		display: grid;
         grid-template-columns: repeat(1, 3fr);
         margin: 0;
         padding: 0;
         list-style: none;
+      }
+
+      .navbar ul {
+		background-color: aquamarine;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0 20px;
       }
   }

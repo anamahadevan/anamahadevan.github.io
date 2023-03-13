@@ -51,9 +51,10 @@ body {
 	text-align:left;
 	font-size:69px;
 }
-/*---image positioning----*/
 
+/*---image positioning----*/
 .images{
+	width:50%;
 	padding:2em;
 	float:right;
 	position: sticky;
@@ -168,7 +169,6 @@ body {
 	height: auto;
 	right: 0%;
 	top:25%;
-
 	font-size:30px;
 	letter-spacing:0;
 }
@@ -178,11 +178,11 @@ body {
 }
 
 .scroll_abilities { 
+	padding-top: 10%;
 	width:100%;
 	height:auto;
 	position:relative;
 	left:0px;
-	top:100%;
 }
 
 .scroll_abilities p { 
@@ -200,11 +200,13 @@ body {
 
 /* --------- MEDIA SCREEN ----------  */
 
-@media only screen and (max-width:500px){
+@media only screen and (max-width:800px){
 
       .navbar ul {
         display: flex;
-        flex-direction: column;
+        flex-direction:column-reverse;
+		justify-content: center;
+
         margin: 0;
         padding: 0;
         list-style: none;

@@ -33,19 +33,21 @@ body {
 
 /* ---------INTRO INFO----------  */
 .hero_banner { 
+	padding-top:5%;
 	width:100%;
 	height:auto;
-	display: grid;
+	display: flex;
  	align-items: center; 
 	grid-template-columns: 1fr 1fr;
  	column-gap: 5px;
 	overflow:hidden;
 }
 
-.hero_banner p { 
+.intro_text { 
 	padding:2em;
 	top:-10%;
-	width:50%;
+	width:40%;
+	height: auto;
 	position:relative;
 	font-family:Abhaya Libre;
 	text-align:left;
@@ -54,8 +56,8 @@ body {
 
 /*---image positioning----*/
 .images{
-	width:50%;
-	padding:2em;
+	width:100%;
+	padding-top:2em;
 	float:right;
 	position: sticky;
 	max-width:100%
@@ -200,7 +202,7 @@ body {
 
 /* --------- MEDIA SCREEN ----------  */
 
-@media only screen and (max-width:800px){
+@media only screen and (max-width:00px){
 
       .navbar ul {
         display: flex;

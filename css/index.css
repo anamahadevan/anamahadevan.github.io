@@ -31,6 +31,16 @@ body {
 	font-size:35px;
   }
 
+/* unvisited & visited link */
+a:link, a:visited {
+	color: rgb(45, 45, 45);
+  }
+  
+  /* mouse over link */
+  a:hover,a:active  {
+	color: rgb(173, 173, 173);
+  }
+  
 /* ---------INTRO INFO----------  */
 .hero_banner { 
 	width:100%;
@@ -168,14 +178,15 @@ body {
 	width:100%;
 	height:auto;
 	position:relative;
-	left:0px;
 }
 
 .scroll_abilities p { 
+	white-space: nowrap;
+	word-spacing: 2em; 
 	padding-bottom: 30%;
 	display: block;
 	width: 100%;
-	font-size:30px;
+	font-size:50px;
   	/* transform: translateX(40%); */
 	animation: move 90s linear infinite; 
 }

@@ -48,12 +48,12 @@ a:link, a:visited {
 }
 
 .hero_banner iframe{
-	height:70%;
+	height:auto;
 	width:90%;
 }
 
 
-/* ---------SEXY GALLERY----------  */
+/* ---------PRODUCT----------  */
 
 .gallery{
 	padding-top: 5em;
@@ -76,13 +76,12 @@ a:link, a:visited {
 	height: auto;
 	display: grid;
 	grid-template-columns: repeat(8, 1fr);
-	grid-template-rows: repeat(3, 1fr);
+	grid-template-rows: repeat(4, 1fr);
 	grid-gap: 2vmin;
 	justify-items: center;
 	align-items: center;
 
   }
-
   
   .wrapper img {
 	z-index: 1;
@@ -94,14 +93,22 @@ a:link, a:visited {
 	transition: all .25s;
   }
 	
-	img:nth-child(7n + 1) {
+	.wrapper img:nth-child(7n + 1) {
 	  grid-column: 2 / span 2;
 	}
 	
-	img:hover {
+	.wrapper img:hover {
 	  z-index: 2;
 	  transform: scale(2);
 	}
+
+	#below{
+		padding-left: 2em;
+		max-width: 50%;
+		max-height: 50%;
+		float:center;
+	  }
+
   
   
   

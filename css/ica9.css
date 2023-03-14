@@ -1,0 +1,11 @@
+#button{
+    border: 2px solid rgb(11, 67, 11);
+    border-radius: 1em;
+    background-color: rgb(50, 154, 95);
+    padding:2.5em 5em;
+    width: 25em;
+}
+
+p{
+    font-size: 5em;
+}

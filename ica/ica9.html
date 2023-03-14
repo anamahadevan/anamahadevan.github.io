@@ -14,7 +14,16 @@
 
     <script>
         console.log("Howdy, world!")
-        let button = document.querySelector("#button")
+        let btn = document.querySelector("#button")
+
+        function changeBtn(){
+            btn.textContent("TEST");
+        }
+
+        btn.addEventListener('click',changeBtn); //calls function
+
+        
+
     </script>
 </body>
 </html>

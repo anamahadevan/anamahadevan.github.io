@@ -115,8 +115,7 @@ a:link, a:visited {
     column-gap: 7%;
 }
 
-#workid{
-}
+#workid{}
 
 .workgrid p{
 	font-size:35px;
@@ -172,6 +171,8 @@ a:link, a:visited {
 .abilities h3{
 	font-weight: normal;
 }
+
+#about_me{}
 
 .scroll_abilities { 
 	padding-top: 10%;

@@ -48,8 +48,8 @@ a:link, a:visited {
 }
 
 .hero_banner iframe{
-	height:auto;
-	width:90%;
+	height:70em;
+	width:80em;
 }
 
 
@@ -71,11 +71,12 @@ a:link, a:visited {
   .wrapper {
 	padding-top: 5em;
 	flex-grow: 1;
-	margin: auto;
+	margin-left: auto;
+	margin-right: auto;
 	max-width: 100%;
 	height: auto;
 	display: grid;
-	grid-template-columns: repeat(8, 1fr);
+	grid-template-columns: repeat(9, 1fr);
 	grid-template-rows: repeat(4, 1fr);
 	grid-gap: 2vmin;
 	justify-items: center;
@@ -87,8 +88,7 @@ a:link, a:visited {
 	z-index: 1;
 	grid-column: span 2;
 	width: 100%;
-	margin-bottom: -52%;
-	clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+	margin-bottom: -70%;
 	transform: scale(1);
 	transition: all .25s;
   }
@@ -102,18 +102,31 @@ a:link, a:visited {
 	  transform: scale(2);
 	}
 
-	#below{
-		padding-left: 2em;
-		max-width: 50%;
-		max-height: 50%;
-		float:center;
-	  }
-
   
   
   
 
-/* ---------HERO BANNER----------  */
+/* --------- MAGAZINE SPREADS ----------  */
 
 
+.magazine{
+	padding-top: 5em;
+}
+.magazine h2{
+	padding-left: 2em;
+	width: 100%;
+	height:auto; 
+	font-size:45px;
+	letter-spacing:0;
+	font-weight: normal;
+	box-shadow: 0px 15px 10px -15px #c4bfbf;
+  }
 
+.magazine img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: fit-content;
+	height:50em;
+	/* width:60%; */
+}

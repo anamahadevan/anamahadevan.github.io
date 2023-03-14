@@ -7,7 +7,7 @@ body {
 	flex-direction: row;
 }
 
-/* ---------HERO BANNER----------  */
+/* ---------WHOLE PAGE----------  */
 .first_page{
 	width:100%;
 	height:auto;
@@ -186,7 +186,7 @@ a:link, a:visited {
 	word-spacing: 2em; 
 	padding-bottom: 30%;
 	display: block;
-	width: 100%;
+	max-width: 50%;
 	font-size:50px;
   	/* transform: translateX(40%); */
 	animation: move 90s linear infinite; 

@@ -10,6 +10,9 @@
 <body>
     <div id="button">
         <p>click me...</p>
+        <label for="guessField"> Enter a guess: </label>
+        <input type="number" required_id="guessField" class="guessField">
+        <input type="submit" value="submit guess" class="guessSubmit">
     </div>
 
     <script>
@@ -18,9 +21,22 @@
 
         function changeBtn(){
             btn.textContent("TEST");
+            btn.style.backgroundColor="darkmagenta";
+            btn.style.border="2px solid magenta";
+            btn.style.color = "white";
         }
 
         btn.addEventListener('click',changeBtn); //calls function
+
+        function checkGuess(){
+            let value = userGuess.value*2;
+            alert(value);
+        }
+
+        let guessBtn = querySelector(".guessSubmit");
+        let userGuess = document.querySelector(".guessField");
+
+        guessBtn.addEventListener('click',checkGuess);
 
         
 

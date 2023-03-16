@@ -38,3 +38,17 @@ let btn = document.querySelector("#button2")
        alert("you're baaaad go lower")
      }
  }
+
+ //add number
+ let clickCount = 0;
+
+ function setupClickListener(){
+   document.getElementById('clickMe')
+     .addEventListener('click', clicked);
+ }
+
+ function clicked(){
+   clickCount++;
+   document.getElementById('countLabel')
+     .innerText = clickCount;
+ }

@@ -8,7 +8,10 @@
     <script type="text/javascript" src="/js/ica9.js"></script>
     <title>Document</title>
 </head>
-<body>
+<body onload="setupClickListener();">
+    
+    <button id="clickMe">Click to add one!</button>
+    <div id="countLabel">0</div>
 
     <div id="button2">
     <h1>Guess A Number</h1>
@@ -22,7 +25,7 @@
         <input type = "text" id = "guessField" class = "guessField">
         <input type = "submit" value = "Submit guess" class = "guessSubmit" id = "submitguess">
     </div>
-
+    
     
 
 </body>

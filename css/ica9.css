@@ -6,6 +6,15 @@
     width: 25em;
 }
 
+#button2{
+    border: 2px solid rgb(129, 46, 125);
+    border-radius: 1em;
+    background-color: rgb(228, 158, 201);
+    padding-bottom: 60em;
+    padding:2.5em 5em;
+    width: 25em;
+}
+
 p{
     font-size: 5em;
 }

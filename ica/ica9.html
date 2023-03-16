@@ -5,41 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/ica9.css">
+    <script type="text/javascript" src="/js/ica9.js"></script>
     <title>Document</title>
 </head>
 <body>
+
+    <div id="button2">
+    <h1>Guess A Number</h1>
+    <p>
+       any number....between one and ten that is
+      </p>
+    </div>
+    
     <div id="button">
-        <p>click me...</p>
-        <label for="guessField"> Enter a guess: </label>
-        <input type="number" required_id="guessField" class="guessField">
-        <input type="submit" value="submit guess" class="guessSubmit">
+        <label for="guessField"> guess a number: </label>
+        <input type = "text" id = "guessField" class = "guessField">
+        <input type = "submit" value = "Submit guess" class = "guessSubmit" id = "submitguess">
     </div>
 
-    <script>
-        console.log("Howdy, world!")
-        let btn = document.querySelector("#button")
+    
 
-        function changeBtn(){
-            btn.textContent("TEST");
-            btn.style.backgroundColor="darkmagenta";
-            btn.style.border="2px solid magenta";
-            btn.style.color = "white";
-        }
-
-        btn.addEventListener('click',changeBtn); //calls function
-
-        function checkGuess(){
-            let value = userGuess.value*2;
-            alert(value);
-        }
-
-        let guessBtn = querySelector(".guessSubmit");
-        let userGuess = document.querySelector(".guessField");
-
-        guessBtn.addEventListener('click',checkGuess);
-
-        
-
-    </script>
 </body>
 </html>

@@ -1,22 +1,30 @@
+//set initial variables for name, randomizing elements, printing story
 var customName = document.getElementById('customname');
 var randomize = document.querySelector('.randomize');
 var story = document.querySelector('.story');
 
+//selects random value from array 
 function randomValueFromArray(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
 
+//base story
 var storyText =
-  "It was 94 farenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but he was not surprised — :insertx: weighs 300 pounds, and it was a hot day.";
+  "It was a juicy and crisp 94 farenheit outside, so :insertx: went for a walk. When they got to :inserty:, they were mildly perturbed for a few moments, then :insertz:. Bob saw the whole thing, but he was not surprised — :insertx: weighs 300 pounds, and it was a hot day.";
 
-var insertX = ["Willy the Goblin", "Big Daddy", "Father Christmas"];
+// who went for a walk
+var insertX = ["Ana", "BMO", "Jerma"];
 
-var insertY = ["the soup kitchen", "Disneyland", "the White House"];
+// where they're going
+var insertY = ["Radio 1190", "The UMC", "upper RiNo"];
 
-var insertZ = ["spontaneously combusted", "melted into a puddle on the sidewalk", "turned into a slug and crawled away"];
+//what happened
+var insertZ = ["suspiciously exploded", " cursed on air and got banned by the FCC", "got hatecrimed"];
 
+//call randomize when user clicks
 randomize.addEventListener('click', result);
 
+//function for printing result
 function result() {
   var newStory = storyText;
   
@@ -46,7 +54,7 @@ function result() {
 
   }
 
- 
+ //prints story
   story.textContent = newStory;
   story.style.visibility = 'visible';
 }

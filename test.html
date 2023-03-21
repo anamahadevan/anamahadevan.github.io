@@ -1,105 +1,58 @@
-<html lang="en">
-          <head>
-            <meta charset="utf-8">
-          
-            <title>Ana's Portfolio</title>
-            <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre&display=swap" rel="stylesheet">
-            <link rel="stylesheet" href="/css/index.css">
-            
-          </head>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Function library example</title>
+  <style>
+    input {
+      font-size: 2em;
+      margin: 10px 1px 0;
+    }
+  </style>
+  </head>
+<body>
 
-          <!-- HERO BANNER  -->
-          <body>
-           
-             <div class="hero_banner">
-                                   
-                <div class="navbar">
-                    <ul>
-                        <li> <a href="#workid">work</a></li>
-                        <li> <a href="#about_me">about</a></li>
-                        <li> <a href="#contact">contact</a></li>
-                      </ul>
-                </div>
-                    
-                <div class="heroposition">
+  <input class="numberInput" type="text">
+  <p></p>
 
-                    <img  src="/img/backstar.png" id="backstar">
+  <script>
+    const input = document.querySelector('.numberInput');
+    const para = document.querySelector('p');
 
-                    <p  id="howdy">Howdy!<br>
-                    I’m Ana Mahadevan, a third year Creative Tech Design Major
-                    with a focus in Computer Science 
-                    at CU Boulder. </p>
+    function squared(num){
+        return num*num;
+    }
 
-                    <div class="front_images">
-                        <img src="/img/photo2.jpeg" id="photo2">
-                        <img src="/img/frontstar.png" id="frontstar">
-                        <img src="/img/photo1.png" id="photo1">
-                    </div>
+    function cubed(num){
+        return num*num*num;
+    }
 
-                </div>
-            </div>
+    function factoriaL(num){
+        if (num <0) return undefined;
+        if (num===0) return 1;
+        let x = num-1;
+        while(x>1){
+            num *= x;
+            x--;
+        }
+        
+        return num;
+    }
 
-            <!-- WORK AND EXPERIENCE -->
+    input.addEventListener("change", () => { 
+        const num = parseFloat(input.value); 
+        if(isNan(num)){ // if entered is NOT a number
+            para.textContent = "You need to enter a number!"; 
+        }
 
-            <div class="workexperience">
-                <h2> work experience & <a href="index.html">portfolio</a> </h2>
-                
-                <div id="workid" class="workgrid">
+        else{
+            para.textContent = '${num} squared is ${squared(num)}.';
+            para.textContent += '${num} cubed is ${cubed(num)}.';
+            para.textContent += '${num} squared is ${factorial(num)}.';
+        }
+    });
 
-                <p>01 Analyst // Navidar</p>
-                <p>02 Creative Lead // Veta Nell</p>
-                <p>03 Layout // Glaze Magazine</p>
-
-                <!--images for companies -->
-                <img src="/img/rectangle_1.png">
-                <img src="/img/rectangle_2.png">
-                <img  src="/img/rectangle_3.png">
-
-                </div>
-
-            </div>
-
-
-            <div class="about_me">
-
-                <h2>about me</h2>
-                  
-                <p  id="about_me">I'm a third year student studying at the University of Colorado at Boulder. I am working to get my Bachelor of Science in Creative Tech Design an in Computer Science.  I have worked in the Industry for the last three years while doing my coursework in tandem.
-                Outside of school and work I am usually creating physical/digital art, making music, editing, or doing graphic design. I love exsisting within the intersection of technology and art and am excited for what I will create in the future. </p>
-
-                <div  class="abilities">
-                <h3>Specializing in:</h3>
-                ①   Technology Design<br>
-                ②   Coding <br>
-                ③   Data Analysis
-                </div>
-
-                <div class=scroll_abilities>
-                    <p>•     Illustrator       •     Python       •     Figma       •     Indesign       •     Photoshop       •     C++       •     Procrate   </p>      
-                </div>
-            </div>
-
-            
-
-            
-
-    <div class=contact>
-    
-        <h2 id="contact">contact </h2>
-
-            <div  class="socials">
-            <h3>for work related inquiries:</h3><br>
-            <br>
-            connect with me on linkedin! <br>
-            <br>
-            anabellemahadevan@gmail.com<br>
-
-
-            </div>
-
-    </div>
-    
-</div>
-
+  </script>
 </body>
 </html>

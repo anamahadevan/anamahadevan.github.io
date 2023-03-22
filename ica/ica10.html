@@ -18,6 +18,8 @@
         line-height: 1.5;
         padding: 10px 20px;
         color: #333;
+        background-position: 6em;
+        background-repeat: no-repeat;
       }
 
       .msgBox button {
@@ -57,11 +59,22 @@
     closeBtn.textContent = 'x';
     panel.appendChild(closeBtn);
 
+    if (msgType === 'warning') {
+    msg.style.backgroundImage = 'url(warning.png)';
+    panel.style.backgroundColor = 'red';
+    } else if (msgType === 'chat') {
+    msg.style.backgroundImage = 'url(chat.png)';
+    panel.style.backgroundColor = 'aqua';
+    } else {
+    msg.style.paddingLeft = '20px';
+    }
     closeBtn.addEventListener('click', () => panel.parentNode.removeChild(panel));
+
+
     }
       
     const btn = document.querySelector('button');
-    btn.addEventListener('click', () => displayMessage('Woo, this is a different message!'));
+    btn.addEventListener('click', () => displayMessage('Hewwo','chat'));
 
 
     </script>

@@ -18,7 +18,6 @@ for(let i =0;i>0;i++){
     newImage.setAttribute('src', xxx);
     newImage.setAttribute('alt', xxx);
     thumbBar.appendChild(newImage);
-    i++;
 }
 
 /* Wiring up the Darken/Lighten button */

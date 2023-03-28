@@ -1,13 +1,16 @@
 h1 {
-  font-family: helvetica, arial, sans-serif;
+  font-family: abhaya-libre;
   text-align: center;
+  
 }
 
 body {
+  background-color:rgba(238.00000101327896, 232.32768058776855, 227.09166795015335, 1);
+  font-family:abhaya-libre;
   width: 640px;
   margin: 0 auto;
-}
 
+}
 .full-img {
   position: relative;
   display: block;

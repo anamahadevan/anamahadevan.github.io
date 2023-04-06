@@ -12,7 +12,8 @@ html {
   
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    background-color: #c8e694;
+    background-image:url("/img/lol.jpg");
+    background-repeat: repeat;
   }
   
   .app {
@@ -32,14 +33,15 @@ html {
     text-align: center;
     padding: 10px;
     border-bottom: 1px solid #ebebeb;
+    font-style: italic;
   }
   
-  .quotes {
+  .drinks {
     padding: 20px 50px;
     min-height: 200px;
   }
   
-  .quote-text {
+  .drink-name {
     padding-bottom: 20px;
     font-size: 25px;
     color: black;
@@ -92,7 +94,7 @@ html {
     .app {
       width: 100%;
     }
-    .quote-text {
+    .drink-name {
       font-size: 18px;
     }
   }

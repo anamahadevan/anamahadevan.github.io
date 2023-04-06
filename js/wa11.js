@@ -22,7 +22,7 @@ async function getquote()//Write the function declaration,
         }
         const data = await response.json();
         console.log(data);
-        displayQuote(data.drinks[0].strDrink)
+        drinkName(data.drinks[0].strDrink);
         // showAnswer(data.drinks[0].strDrink)
     } 
     
@@ -32,9 +32,9 @@ async function getquote()//Write the function declaration,
     }
 }
 
-//Write a second function called "displayQuote" that will display the text of a fetched quote in the HTML element with an id of js-quote-text.
+//Write a second function called "drinkName" that will display the text of a fetched quote in the HTML element with an id of js-quote-text.
 
-function displayQuote(quoteparam) 
+function drinkName(quoteparam) 
 //If successful, output the quote to the console
 
 {
@@ -48,7 +48,7 @@ function showAnswer(quoteparam)
     const answer = document.querySelector("#js-answer-text");
     answer.textContent = quoteparam; 
 }
-//Adjust getQuote to run displayQuote at the proper place in the code.
+//Adjust getQuote to run drinkName at the proper place in the code.
 
 
 

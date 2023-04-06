@@ -12,7 +12,7 @@ html {
   
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    background-color: #c9bd95;
+    background-color: #c8e694;
   }
   
   .app {
@@ -72,6 +72,7 @@ html {
     background-color: #1e7fbb;
   }
   
+  /*button needed*/
   .new-quote {
     background-color: #4A2B0F;
     margin-bottom: 15px;

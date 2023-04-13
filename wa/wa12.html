@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <!-- <link rel="stylesheet" href="wa11.css"> -->
+    <link rel="stylesheet" href="/css/wa9.css">
     <title>Company</title>
 </head>
 
@@ -13,3 +13,18 @@
 </body>
 
 </html>
+
+<!--
+
+//problem 6
+console.log('problem 6:')
+function workfromhome(homearray) {
+    for (let i = 0; i < company.employees.length; i++) {
+        let employee = company.employees[i];
+        let workingFromHome = homearray.includes(employee.firstname) ? true : false;
+        employee.working_from_home = workingFromHome;
+    }
+    console.log(JSON.stringify(company));
+}
+workfromhome(["Anna","Sam"]);
+-->

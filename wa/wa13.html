@@ -7,12 +7,34 @@
 
 <div class="game">
     <!-- HP BAR-->
-    <figure class='sticky'>
-            <div class='bar-outer'>
-                <div class='bar-inner'></div>
-            </div>
-    </figure>
-  </section>
+    <div
+      style="
+        background-color: white;
+        width: 250px;
+        position: absolute;
+        top: 330px;
+        right: 50px;
+        border: 4px black solid;
+        padding: 12px;
+      "
+    >
+      <h1 style="font-size: 16px">Emby</h1>
+      <div style="position: relative">
+        <div
+          style="height: 5px; background-color: #ccc; margin-top: 10px"
+        ></div>
+        <div
+          id="playerHealthBar"
+          style="
+            height: 5px;
+            background-color: green;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;"
+        ></div>
+      </div>
+    </div>
 
 
   <div class="opponent">

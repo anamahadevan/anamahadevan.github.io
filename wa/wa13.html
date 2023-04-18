@@ -1,15 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="wa13.css">
-    <script defer src="/js/wa13.js"></script>
+  <title>Pokemon</title>
+  <script type = "text/javascript" src = "/js/wa13.js"></script>
+  <link rel = "stylesheet" type = "text/css" href = "/css/wa13.css" />
 </head>
-<body>
 
-</body>
-</html>
+<div class="game">
+    <!-- HP BAR-->
+    <figure class='sticky'>
+            <div class='bar-outer'>
+                <div class='bar-inner'></div>
+            </div>
+    </figure>
+  </section>
+
+
+  <div class="opponent">
+    <div class="stats">
+      <div class="top">
+        <div class="pokeballs">
+          <div class="pokeball"></div>
+          <div class="pokeball"></div>
+          <div class="pokeball"></div>
+        </div>
+        <!-- <div id = "apHP" class="hp-count">100</div> -->
+      </div>
+      <span class="name">
+        volume decreaser
+      </span>
+      <span class="level"> 69 </span>
+    </div>
+    <img class="pokemon" src="http://img.pokemondb.net/sprites/black-white/anim/normal/charizard.gif" alt ="A sprite of charizard" />
+  </div>
+  <div class="player">
+    <div class="stats">
+      <div class="top">
+          <div class="pokeballs">
+          <div class="pokeball"></div>
+          <div class="pokeball"></div>
+          <div class="pokeball"></div>
+        </div>
+        <div id = "myHP" class="hp-count">100</div>
+      </div>
+      <span class="name">
+        sylveon
+      </span>
+      <span class="level">
+        86
+      </span>
+    </div>
+    <img class="pokemon" src="/img/player.gif" alt="a gif of sylveon!" />
+  </div>
+</div>
+<div class="box">
+  <div id = "message" class="message">
+   change your volume?
+  </div>
+  <div class="actions">
+    <button onclick = "waterCannon()"> volume cannon</button>
+    <button onclick = "waterPulse()">volume pulse</button>
+    <button onclick = "surf()">surf</button>
+    <button onclick = "tackle()">curbstomp</button>
+  </div>
+  <div class = "continue">
+    <button onclick = "compPokemon()">Continue</button>
+  </div>
+</div>

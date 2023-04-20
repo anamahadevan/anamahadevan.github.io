@@ -7,36 +7,16 @@
 
 <div class="game">
     <!-- HP BAR-->
-    <div
-      style="
-        background-color: white;
-        width: 250px;
-        position: absolute;
-        top: 330px;
-        right: 50px;
-        border: 4px black solid;
-        padding: 12px;
-      "
-    >
-      <h1 style="font-size: 16px">Emby</h1>
-      <div style="position: relative">
-        <div
-          style="height: 5px; background-color: #ccc; margin-top: 10px"
-        ></div>
-        <div
-          id="playerHealthBar"
-          style="
-            height: 5px;
-            background-color: green;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;"
-        ></div>
-      </div>
+
+    <div class="health-bar">
+        <div class="health-bar-progress" id="health-bar-progress"></div>
     </div>
+      
+      
 
 
+
+ <!-- OPPONENT -->
   <div class="opponent">
     <div class="stats">
       <div class="top">
@@ -45,15 +25,15 @@
           <div class="pokeball"></div>
           <div class="pokeball"></div>
         </div>
-        <!-- <div id = "apHP" class="hp-count">100</div> -->
       </div>
       <span class="name">
         volume decreaser
       </span>
-      <span class="level"> 69 </span>
     </div>
-    <img class="pokemon" src="http://img.pokemondb.net/sprites/black-white/anim/normal/charizard.gif" alt ="A sprite of charizard" />
+    <img class="pokemon" src="/img/meep.gif" alt ="A sprite of cat!" />
   </div>
+
+  <!----- PLAYER ------>
   <div class="player">
     <div class="stats">
       <div class="top">
@@ -67,9 +47,6 @@
       <span class="name">
         sylveon
       </span>
-      <span class="level">
-        86
-      </span>
     </div>
     <img class="pokemon" src="/img/player.gif" alt="a gif of sylveon!" />
   </div>
@@ -79,8 +56,8 @@
    change your volume?
   </div>
   <div class="actions">
-    <button onclick = "waterCannon()"> volume cannon</button>
-    <button onclick = "waterPulse()">volume pulse</button>
+    <button onclick = "volumeincr()"> volume boom</button>
+    <button onclick = "waterPulse()">water pulse</button>
     <button onclick = "surf()">surf</button>
     <button onclick = "tackle()">curbstomp</button>
   </div>

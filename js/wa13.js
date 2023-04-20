@@ -3,14 +3,14 @@ var opHP = 100;
 opAttacks = [flameThrower, dragonClaw, ember, growl];
 playerMove = 0;
 /* users moves */
-function waterCannon() {
+function volumeincr() {
   if(playerMove == 0 && userHP != 0) {
     var miss = Math.floor((Math.random() * 10) + 1); // miss rate
     if(miss == 1) {
       document.getElementById('message').innerHTML = " Blastoise's attack missed! ";
     }
     else {
-      document.getElementById('message').innerHTML = " Blastoise used water cannon "; // attack
+      document.getElementById('message').innerHTML = " Sylveon increased volume! "; // attack
       var critical = Math.floor((Math.random() * 10) + 1); // critical
       if(critical == 4){
         for(var x = 0; x < 2; x++){
@@ -141,7 +141,7 @@ function flameThrower() {
   if(userHP < 0) { userHP = 0} // faint
   document.getElementById('myHP').innerHTML = userHP; // update hp
     if(userHP == 0) { // fainted
-      document.getElementById('message').innerHTML = " Blastoise fainted! " // fainted
+      document.getElementById('message').innerHTML = " volume at zero! " // fainted
     }
   }
 }
@@ -227,3 +227,30 @@ function compPokemon() { // continue
     playerMove = 0; // update player move
   }
 }
+
+////////// ACTUAL VOLUME CONTROLS /////////////////
+
+// Get the health bar progress element
+const healthBarProgress = document.getElementById('health-bar-progress');
+
+// Set the initial health value to 100
+let health = 100;
+
+// Function to update the health bar
+function updateHealthBar() {
+  // Set the width of the progress bar based on the health value
+  healthBarProgress.style.width = health + '%';
+  
+  // If the health is less than or equal to 0, end the game
+  if (health <= 0) {
+    alert('Game over!');
+    // Add more logic to end the game
+  }
+}
+
+// Call the updateHealthBar function to initialize the health bar
+updateHealthBar();
+
+// Example code to decrease the health by 10% when the player is hit
+health -= 10;
+updateHealthBar();

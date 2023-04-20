@@ -15,8 +15,22 @@ body {
 }
 
 /* nav bar */
-
-
+.health-bar {
+    width: 120px;
+    height: 8px;
+    background-color: #222;
+    border: 1px solid #333;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .health-bar-progress {
+    height: 100%;
+    background-color: #ff1f1f;
+    width: 100%;
+  }
+  
+  
 
 
 .opponent {
@@ -34,7 +48,7 @@ body {
 .opponent .pokemon {
   position: absolute;
   bottom: 0;
-  right: 14em;
+  right: 5em;
   width: 10em;
 }
 
@@ -52,9 +66,10 @@ body {
 
 .player .pokemon {
   position: absolute;
-  left: 100px;
-  bottom: 10px;
-  width: 160px;
+  left: 30px;
+  bottom: -1em;
+  width: 330px;
+  height: 300px;
 }
 
 .box {
@@ -174,6 +189,6 @@ body {
   font-weight: bold;
 }
 
-.stats .level:before {
+/* .stats .level:before {
   content: "LVL"
-}
+} */

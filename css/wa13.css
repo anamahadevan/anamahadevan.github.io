@@ -16,8 +16,11 @@ body {
 
 /* nav bar */
 .health-bar {
-    width: 120px;
-    height: 8px;
+    position: relative;
+    left: 12em;
+    top: 1em;
+    width: 400px;
+    height: 14px;
     background-color: #222;
     border: 1px solid #333;
     border-radius: 4px;
@@ -26,8 +29,8 @@ body {
   
   .health-bar-progress {
     height: 100%;
-    background-color: #ff1f1f;
-    width: 100%;
+    background-color: #23a12c;
+    width: 30%;
   }
   
   
@@ -54,7 +57,7 @@ body {
 
 .player {
   position: relative;
-  height: 192px;
+  height: 190px;
 }
 
 .player .stats {
@@ -67,7 +70,7 @@ body {
 .player .pokemon {
   position: absolute;
   left: 30px;
-  bottom: -1em;
+  bottom: 1em;
   width: 330px;
   height: 300px;
 }
@@ -175,10 +178,10 @@ body {
   width: 25px;
   height: 25px;
 }
-
+/* 
 .stats .hp-count:before {
   content: 'HP: '
-}
+} */
 
 .stats .hp-count {
   float: right;

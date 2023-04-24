@@ -19,7 +19,7 @@ function surf() {
   updatehealth(-5);
 }
 
-function tackle() {
+function curbstomp() {
   document.getElementById('message').innerHTML = " erereree rawr "
   updatehealth(30);
 }
@@ -37,7 +37,7 @@ function updatehealth(health){
   console.log("total health:"+total_health);
   // healthBarProgress.width = health;
   if(health){
-    document.getElementById("health-bar-progress").style.width = health + '%';
+    document.getElementById("health-bar-progress").style.width = total_health + '%';
   }
 
 }

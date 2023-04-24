@@ -30,7 +30,7 @@ body {
   .health-bar-progress {
     height: 100%;
     background-color: #23a12c;
-    width: 30%;
+    width: 0%;
   }
   
   

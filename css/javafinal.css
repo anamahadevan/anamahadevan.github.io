@@ -21,6 +21,7 @@
     padding: 0;
     margin: 0;
     list-style: none;
+
   }
   /* 
   |---------------------------------------
@@ -54,13 +55,14 @@
   .enemy-container {
     position: absolute;
     left: 24px;
-    top: 19px;
-    width: 610px;
+    top: 65px;
+    width: 600px;
     height: 236px;
   }
   .enemy-grid {
     position: absolute;
-    top: 0;
+    height:auto;
+    top: 2;
     left: 0;
   }
   .enemy img {
@@ -104,7 +106,7 @@
   .Asgore .square {
     border: 0;
   }
-  /* PAPYRUS ONLY */
+  /* other enemies */
   .Papyrus .square {
     border: 0;
   }
@@ -154,7 +156,7 @@
   |--------------------------------------- 
   */
   .menu-fight {
-    background-image: url("https://res.cloudinary.com/daniel-griffiths/image/upload/v1473626867/fight-bg_mj5vak.png");
+    background-image: url(/img/fight.png);
   }
   .battle-heart {
     background: url("https://res.cloudinary.com/daniel-griffiths/image/upload/v1473626867/heart_lpr6lv.png");

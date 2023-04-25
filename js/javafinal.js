@@ -300,16 +300,17 @@ Mousetrap.bind('enter', function(){
 |--------------------------------------- 
 */
 
-  Mousetrap.bind('esc', function() {
-    /* get out of the sub menus */
-    if(currentContext == 'act'
-       || currentContext == 'item'
-       || currentContext == 'mercy'){
-      $('.menu-' + currentContext).hide();
-      $('.action-option-' + actionIndex).addClass('active');
-      currentContext = 'action';
-    } 
-  });
+Mousetrap.bind('esc', function() {
+  /* get out of the sub menus */
+  if(currentContext == 'act' || currentContext == 'item' || currentContext == 'mercy') {
+    var menu = document.querySelector('.menu-' + currentContext);
+    menu.style.display = 'none';
+    var activeAction = document.querySelector('.action-option-' + actionIndex);
+    activeAction.classList.add('active');
+    currentContext = 'action';
+  } 
+});
+
 
 
 /* 

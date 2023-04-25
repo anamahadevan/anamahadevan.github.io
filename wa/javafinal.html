@@ -2,109 +2,85 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>Cat Dating Simulator :3</title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<title> undertale? </title>
+	<link rel="stylesheet" type="text/css" href="/css/javafinal.css">
+    <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/mousetrap@1.6.5/mousetrap.min.js"></script>
+    <script type = "text/javascript" src = "/js/javafinal.js"></script>
+	
 </head>
 
 <body>
 
-	<header>
+<!--audio-->
+<iframe class="audio" src=""></iframe>
+<div class="key-guide"> 
+        arrow keys to move <br>
+        enter = confirm <br>
+        esc = cancel
+</div>
 
-		<div id="health-container" class="container">
-			<div id="health" class="health healthy" style="width: 100%;"></div>
-		</div>
+<div class="audio-toggle">[Enable Music]</div>
 
-		<time>
-			<span id="clock">00:00</span>
-			<span id="calendar">
-				<span id="month">Spring</span> <span id="day">1</span>, Year <span id="year">1</span>
-			</span>
-		</time>
-
-		<var id="money"></var>
-
-		<menu>
-			<ul>
-				<li><a href="#" data-action="toggle" data-target="map" title="Go to a location.">Go to location</a></li>
-				<li><a href="#" data-action="toggle" data-target="shop" title="Shop.">Go to shop</a></li>
-				<li><a href="#" data-action="scavange" title="Scavange the area.">Scavange</a></li>
-				<li><a href="#" data-action="sleep" class="active" title="Go to sleep.">Sleep</a></li>
-			</ul>
-		</menu>
-
-	</header>
-
-	<aside data-toggle="map" data-data="map">
-		<a href="#" data-action="close">x</a>
-		<ul id="menu-location"></ul>
-	</aside>
-
-	<aside data-toggle="shop" data-data="shop">
-		<a href="#" data-action="close">x</a>
-		<ul id="menu-shop"></ul>
-	</aside>
-
-	<aside data-data="inventory">
-		<ul id="menu-inventory"></ul>
-	</aside>
-
-	<section>
-
-		<div id="location" class="home"></div>
-
-		<div id="player" class="player player-1">
-
-			<div id="player-dialog" class="dialog left">
-				<h4>Player</h4>
-				<p></p>
-				<a href="" data-action="accept">OK</a>
-			</div>
-
-		</div>
-
-		<div id="cat" class="cat">
-
-			<a href="#" data-action="pet" title="Pet cat">
-				<img src="img/menu/hand.svg">
-			</a>
-
-			<div id="heart"></div>
-		
-			<div id="cat-dialog" class="dialog right">
-				<h4></h4>
-				<p></p>
-				<a href="" data-action="accept">OK</a>
-			</div>
-
-		</div>
-
-		<div id="space" class="pause"></div>
-
-	</section>
-
-	<footer>
-		<div id="log"></div>
-	</footer>
-
-	<div id="blackout" class="blackout"></div>
-	
-</body>
-
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="modules/global.js"></script>
-<script src="modules/cats.js"></script>
-<script src="modules/locations.js"></script>
-<script src="modules/inventory.js"></script>
-<script src="modules/ui.js"></script>
-<script src="modules/ui/behaviours.js"></script>
-<script src="modules/ui/dialog.js"></script>
-<script src="modules/player.js"></script>
-<script src="modules/events.js"></script>
+<div class="undertale">
+    <div class="enemy-container">
+        <div class="enemy"> <img src="" /></div>
+        <div class="enemy-grid">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+    </div>
+    <ul class="menu-dialog"></ul>
+    <ul class="menu-hidden menu-fight-enemy-turn">insert cool fight animations here<div class="battle-heart"></div>
+    </ul>
+    <ul class="menu-hidden menu-fight">
+        <div class="attack-line"></div>
+    </ul>
+    <ul class="menu menu-hidden menu-act"></ul>
+    <ul class="menu menu-hidden menu-item">
+        <li class="menu-option">* Cookie</li>
+        <li class="menu-option">* Hotdog</li>
+    </ul>
+    <ul class="menu menu-hidden menu-mercy">* spare</ul>
+    <div class="status-bar">
+        <div class="lvl">LV 1</div>
+        <div class="hp">
+            <div class="hp-txt">HP</div>
+            <div class="hp-bar"></div>
+            <div class="hp-min">20</div>/<div class="hp-max">20</div>
+        </div>
+    </div>
+    <ul class="action">
+        <li class="action-option-1 action-option active" data-context="fight">FIGHT</li>
+        <li class="action-option-2 action-option" data-context="act">ACT</li>
+        <li class="action-option-3 action-option" data-context="item">ITEM</li>
+        <li class="action-option-4 action-option" data-context="mercy">MERCY</li>
+    </ul>
+    <div class="restart">
+        <div class="btn">Restart?</div>
+    </div>
+</div>
 
 <script>
-$( document ).ready(function() {
-	Ui.init();
+  document.addEventListener('keydown', function(event) {
+  console.log(event.key);
 });
 </script>
+
+</body>
+
+
+
+
 
 </html>

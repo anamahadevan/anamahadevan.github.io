@@ -368,7 +368,3 @@ Mousetrap.bind('esc', function() {
   // });
 
 });
-
-
-
-

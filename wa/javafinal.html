@@ -5,72 +5,81 @@
 	<title> undertale? </title>
 	<link rel="stylesheet" type="text/css" href="/css/javafinal.css">
     <script src="https://cdn.jsdelivr.net/npm/mousetrap@1.6.5/mousetrap.min.js"></script>
-    <script type = "text/javascript" src = "/js/javafinal.js"></script>
-	
 </head>
 
 <body>
 
 <!--audio-->
-<iframe class="audio" src=""></iframe>
-<div class="key-guide"> 
-        arrow keys to move <br>
-        enter = confirm <br>
-        esc = cancel
+<audio src=""></audio>
+
+<div class="key-guide">
+  arrow keys to move <br>
+  enter = confirm <br>
+  esc = cancel
 </div>
 
-<div class="audio-toggle">[Enable Music]</div>
+<button class="audio-toggle">Enable Music</button>
 
 <div class="undertale">
-    <div class="enemy-container">
-        <div class="enemy"> <img src="" /></div>
-        <div class="enemy-grid">
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-        </div>
+  <div class="enemy-container">
+    <div class="enemy">
+      <img src="">
     </div>
-    <ul class="menu-dialog"></ul>
-    <ul class="menu-hidden menu-fight-enemy-turn">insert cool fight animations here<div class="battle-heart"></div>
-    </ul>
-    <ul class="menu-hidden menu-fight">
-        <div class="attack-line"></div>
-    </ul>
-    <ul class="menu menu-hidden menu-act"></ul>
-    <ul class="menu menu-hidden menu-item">
-        <li class="menu-option">* Cookie</li>
-        <li class="menu-option">* Hotdog</li>
-    </ul>
-    <ul class="menu menu-hidden menu-mercy">* spare</ul>
-    <div class="status-bar">
-        <div class="lvl">LV 1</div>
-        <div class="hp">
-            <div class="hp-txt">HP</div>
-            <div class="hp-bar"></div>
-            <div class="hp-min">20</div>/<div class="hp-max">20</div>
-        </div>
+    <div class="enemy-grid">
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
     </div>
-    <ul class="action">
-        <li class="action-option-1 action-option active" data-context="fight">FIGHT</li>
-        <li class="action-option-2 action-option" data-context="act">ACT</li>
-        <li class="action-option-3 action-option" data-context="item">ITEM</li>
-        <li class="action-option-4 action-option" data-context="mercy">MERCY</li>
-    </ul>
-    <div class="restart">
-        <div class="btn">Restart?</div>
+  </div>
+  <ul class="menu menu-dialog"></ul>
+  <ul class="menu menu-hidden menu-fight-enemy-turn">
+    <!-- insert cool fight animations here -->
+    <div class="battle-heart"></div>
+  </ul>
+  <ul class="menu menu-hidden menu-fight">
+    <div class="attack-line"></div>
+  </ul>
+  <ul class="menu menu-hidden menu-act"></ul>
+  <ul class="menu menu-hidden menu-item">
+    <li class="menu-option">
+      * Cookie
+    </li>
+    <li class="menu-option">
+      * Hotdog
+    </li>
+  </ul>
+  <ul class="menu menu-hidden menu-mercy">
+    * spare
+  </ul>
+  <div class="status-bar">
+    <div class="lvl">LV 1</div>
+    <div class="hp">
+      <div class="hp-txt">HP</div>
+      <div class="hp-bar">
+        <div class="hp-min">20</div>
+        /
+        <div class="hp-max">20</div>
+      </div>
     </div>
+  </div>
+  <ul class="action">
+    <li class="action-option" data-context="fight">FIGHT</li>
+    <li class="action-option" data-context="act">ACT</li>
+    <li class="action-option" data-context="item">ITEM</li>
+    <li class="action-option" data-context="mercy">MERCY</li>
+  </ul>
+  <div class="restart">
+    <div class="btn">Restart?</div>
+  </div>
 </div>
 
 <script>
@@ -79,10 +88,8 @@
 });
 </script>
 
+<script type = "text/javascript" src = "/js/javafinal.js"></script>
+
 </body>
-
-
-
-
 
 </html>

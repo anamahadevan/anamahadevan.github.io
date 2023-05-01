@@ -74,18 +74,18 @@ q:before, q:after {
    content: none;
 }
 
-ins {
+/* ins {
    background-color: #ff9;
    color: #000;
    text-decoration: none;
-}
+} */
 
-mark {
+/* mark {
    background-color: #A7F4F6;
    color: #555;
 }
 
-del { text-decoration: line-through; }
+del { text-decoration: line-through; } */
 
 abbr[title], dfn[title] {
    border-bottom: 1px dotted;
@@ -724,7 +724,4 @@ properly.
 	margin-right: auto !important;
 	text-align: center !important;
 }
-
-
-
 

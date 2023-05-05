@@ -2,11 +2,12 @@
 console.clear();
 
 var currentContext = 'action';
-var actionIndex = 1;
+var actionIndex = 0;
 var menuIndex = 1;
-var maxIndex = 4;
+var maxIndex = 3;
 var dialog = '';
-var actionSelector = document.querySelectorAll('.action-option');
+// Not working
+var actionSelector = document.querySelectorAll('#cum');
 var heartSpeed = 30;
 // var Mousetrap = 0;
 
@@ -67,6 +68,10 @@ var enemies = {
 */
 
 document.addEventListener("DOMContentLoaded", function() {
+
+  // Sets the first action selector as active
+  actionSelector[actionIndex].classList.add('active')
+
   function rand(obj) {
   var result;
   var count = 0;
@@ -154,10 +159,10 @@ window.addEventListener('resize', function(evt) {
   
   /* move left */
 function prevAction(actionMenuItem){
-  if(actionIndex > 1 && currentContext == 'action'){
+  if(actionIndex > 0 && currentContext == 'action'){
+    actionSelector[actionIndex].classList.remove('active');
     actionIndex--;
-    actionSelector.classList.remove('active');
-    document.querySelector('.action-option-' + actionIndex).classList.add('active');
+    actionSelector[actionIndex].classList.add('active');
     console.log(actionIndex);
   }
 }
@@ -165,9 +170,9 @@ function prevAction(actionMenuItem){
 /* move right */
 function nextAction(actionMenuItem){
   if(actionIndex < maxIndex && currentContext == 'action'){
+    actionSelector[actionIndex].classList.remove('active');
     actionIndex++;
-    actionSelector.classList.remove('active');
-    document.querySelector('.action-option-' + actionIndex).classList.add('active');
+    actionSelector[actionIndex].classList.add('active');
     console.log(actionIndex);
   }
 }
@@ -209,7 +214,7 @@ Mousetrap.bind('enter', function(){
 
   /* set the new content and show the relevant menu */
   if(currentContext == 'action'){
-    currentContext = document.querySelector('.action-option-' + actionIndex).getAttribute('data-context');
+    currentContext = actionSelector[actionIndex].getAttribute('data-context');
     document.querySelector('.menu-' + currentContext).style.display = 'block'; 
     document.querySelector('.action-option-' + actionIndex).classList.remove('active');
     console.log(currentContext);
@@ -305,8 +310,7 @@ Mousetrap.bind('esc', function() {
   if(currentContext == 'act' || currentContext == 'item' || currentContext == 'mercy') {
     var menu = document.querySelector('.menu-' + currentContext);
     menu.style.display = 'none';
-    var activeAction = document.querySelector('.action-option-' + actionIndex);
-    activeAction.classList.add('active');
+    actionSelector[actionIndex].classList.add('active');
     currentContext = 'action';
   } 
 });

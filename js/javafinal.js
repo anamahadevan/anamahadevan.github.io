@@ -45,13 +45,6 @@ var enemies = {
     "gold":"150",
     "act-options":["Check","Talk"]
   }, 
-  "Asgore":{
-    "sprite":"https://res.cloudinary.com/daniel-griffiths/image/upload/v1473626876/asgore_rfa9nv.gif",
-    "music":"https://www.youtube.com/embed/pcamjcoRmrQ?autoplay=1&version=3&loop=1&rel=0&showinfo=0&autohide=1&playlist=pcamjcoRmrQ&vq=tiny",
-    "dialog":"(A strange light fills the room. )",
-    "gold":"150",
-    "act-options":["Check","Talk"]
-  },  
   "Muffet":{
     "sprite":"https://res.cloudinary.com/daniel-griffiths/image/upload/v1473626876/muffet_mgre2y.gif",
     "music":"https://www.youtube.com/embed/qgFkG80INO0?autoplay=1&version=3&loop=1&rel=0&showinfo=0&autohide=1&playlist=qgFkG80INO0&vq=tiny",
@@ -122,9 +115,6 @@ document.addEventListener("DOMContentLoaded", function() {
       setTimeout(typeString, 20);
     }
   }
-  
-  // typeString();
-  
   
   typeString();
   

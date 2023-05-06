@@ -55,7 +55,7 @@
   .enemy-container {
     position: absolute;
     left: 24px;
-    top: 65px;
+    top: 15px;
     width: 600px;
     height: 236px;
   }
@@ -144,6 +144,15 @@
     padding-left: 55px;
     width: 184px;
   }
+
+  .menu-option .active{
+    background: url("https://res.cloudinary.com/daniel-griffiths/image/upload/v1473626867/heart_lpr6lv.png") #000;
+    background-repeat: no-repeat;
+    background-position: 7px center;
+    color: #ff0;
+    border: 2px solid #ff0;
+  }
+
   .menu-hidden {
     display: none;
   }
@@ -250,6 +259,7 @@
   .action-option:last-child {
     margin-right: 0;
   }
+  /* HOVER TURNS YELLOW */
   .action-option.active {
     background: url("https://res.cloudinary.com/daniel-griffiths/image/upload/v1473626867/heart_lpr6lv.png") #000;
     background-repeat: no-repeat;

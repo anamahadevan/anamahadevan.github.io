@@ -21,6 +21,7 @@ var heartSpeed = 30;
 /* enemies */
 var enemies = {
   "Temmie":{
+    "name": "Temmie",
     "sprite":"https://res.cloudinary.com/daniel-griffiths/image/upload/v1473626874/temmie_nss3il.gif",
     "music":"https://www.youtube.com/embed/JRU6GnETSN4?autoplay=1&version=3&loop=1&rel=0&showinfo=0&autohide=1&playlist=JRU6GnETSN4&vq=tiny",
     "dialog":"Special enemy Temmi appears here to defeat you!!",
@@ -29,6 +30,7 @@ var enemies = {
     "act-respone":["Temmi looks nervous","emep","rerm","i hate minorities"]
   },  
   "Sans":{
+    "name": "Sans",
     "sprite":"https://res.cloudinary.com/daniel-griffiths/image/upload/v1473626872/sans_kckyu7.gif",
     "music":"https://www.youtube.com/embed/B2jVbSI9H4o?autoplay=1&version=3&loop=1&rel=0&showinfo=0&autohide=1&playlist=B2jVbSI9H4o&vq=tiny",
     "dialog":"You’re Gonna Have a Bad Time",
@@ -37,6 +39,7 @@ var enemies = {
     "act-respone":["Sans looks insulted", "Sans offers his QR Code"]
   },  
   "Papyrus":{
+    "name": "Papyrus",
     "sprite":"https://res.cloudinary.com/daniel-griffiths/image/upload/v1473626873/papyrus_fk7omx.png",
     "music":"https://www.youtube.com/embed/mqzBv3FYpr0?autoplay=1&version=3&loop=1&rel=0&showinfo=0&autohide=1&playlist=mqzBv3FYpr0&vq=tiny",
     "dialog":"Papyrus blocks the way!",
@@ -45,6 +48,7 @@ var enemies = {
     "act-respone":["Papyrus is looking at TikTok","Papyrus blushes","Papyrus blows you a kiss"]
   },  
   "Undyne":{
+    "name": "Undyne",
     "sprite":"https://res.cloudinary.com/daniel-griffiths/image/upload/v1473626870/undyne_sy9laq.gif",
     "music":"https://www.youtube.com/embed/YTy9v9a7Tmo?autoplay=1&version=3&loop=1&rel=0&showinfo=0&autohide=1&playlist=YTy9v9a7Tmo&vq=tiny",
     "dialog":"Undyne prepares for battle!",
@@ -53,6 +57,7 @@ var enemies = {
     "act-respone":["Undyne sharpens her spear ","Hey.","Undyne looks perturbed."]
   }, 
   "Muffet":{
+    "name": "Muffet",
     "sprite":"https://res.cloudinary.com/daniel-griffiths/image/upload/v1473626876/muffet_mgre2y.gif",
     "music":"https://www.youtube.com/embed/qgFkG80INO0?autoplay=1&version=3&loop=1&rel=0&showinfo=0&autohide=1&playlist=qgFkG80INO0&vq=tiny",
     "dialog":"The spiders clap to the music.",
@@ -92,8 +97,9 @@ document.addEventListener("DOMContentLoaded", function() {
     music = enemies[randomEnemy]['music'];
     gold = enemies[randomEnemy]['gold'];
     dialog = enemies[randomEnemy]['dialog'];
+    enemyname = enemies[randomEnemy]['name'];
 
-      
+      //for each act options
       var menuAct = document.querySelector('.menu-act');
       if (menuAct) {
         enemies[randomEnemy]['act-options'].forEach(function (value) {
@@ -300,7 +306,93 @@ Mousetrap.bind('enter', function(){
     
       /* reset heart position */
       document.querySelector('.battle-heart').removeAttribute("style");
+
+      /* testing testing */
+      //call in enemy thingy
+
+      // add space for fight animation
+		  var canvas = document.getElementById("fightbounce");
+		  var ctx = canvas.getContext("2d");
+
+      // Load the heart image
+      if(enemyname === "Temmie"){
+        var img = new Image();
+        img.src = "/js-final/bone.png";
+      }
+      else if(enemyname === "Sans"){
+        var img = new Image();
+        img.src = "/js-final/bone.png";
+      }
+      else if(enemyname === "Papyrus"){
+        var img = new Image();
+        img.src = "/js-final/bone.png";
+      }
+      else if(enemyname === "Undyne"){
+        var img = new Image();
+        img.src = "/js-final/heart.png";
+      }
+      else if(enemyname === "Muffet"){
+        var img = new Image();
+        img.src = "/js-final/heart.png";
+      }
+
+		// Set the initial position and velocity of the items
+		var item1 = { x: 100, y: 100, vx: 2, vy: 3, r: 10 };
+		var item2 = { x: 200, y: 200, vx: -2, vy: -3, r: 10 };
+
+		// Draw the items on the canvas
+		function draw() {
+			// Clear the canvas
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+			// Draw item1
+			ctx.drawImage(img, item1.x - item1.r, item1.y - item1.r, item1.r * 2, item1.r * 2);
+
+			// Draw item2
+			// ctx.drawImage(img, item2.x - item2.r, item2.y - item2.r, item2.r * 2, item2.r * 2);
+
+			// Move the items
+			item1.x += item1.vx;
+			item1.y += item1.vy;
+			item2.x += item2.vx;
+			item2.y += item2.vy;
+
+			// Bounce the items off the walls
+			if (item1.x + item1.r > canvas.width || item1.x - item1.r < 0) {
+				item1.vx = -item1.vx;
+			}
+			if (item1.y + item1.r > canvas.height || item1.y - item1.r < 0) {
+				item1.vy = -item1.vy;
+			}
+			if (item2.x + item2.r > canvas.width || item2.x - item2.r < 0) {
+				item2.vx = -item2.vx;
+			}
+			if (item2.y + item2.r > canvas.height || item2.y - item2.r < 0) {
+				item2.vy = -item2.vy;
+			}
+		}
+
+		// Call the draw function every 10 milliseconds
+		setInterval(draw, 10);
     
+    // checks if item 1&2 hits the heart
+    // Get the bounding box of the first element 
+    const element1 = document.getElementById('battle-heart'); 
+    const rect1 = element1.getBoundingClientRect(); 
+  
+    // Get the bounding box of the second element 
+    const element2 = document.getElementById('item1'); 
+    const rect2 = element2.getBoundingClientRect(); 
+    
+    // Check if the two elements overlap 
+    const overlap = !(rect1.right < rect2.left ||  
+                      rect1.left > rect2.right ||  
+                      rect1.bottom < rect2.top ||  
+                      rect1.top > rect2.bottom); 
+    
+    // Log the result 
+    console.log(overlap);
+
       /* just a placeholder, hide the battle screen after 3 seconds */
       setTimeout(function(){
         document.querySelector('.menu-fight-enemy-turn').style.display = 'none';
@@ -309,7 +401,7 @@ Mousetrap.bind('enter', function(){
         menu.style.display = 'none';
         actionSelector[actionIndex].classList.add('active');
         currentContext = 'action';
-      }, 3000);
+      }, 6000);
 
       return
 

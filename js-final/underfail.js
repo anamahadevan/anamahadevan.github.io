@@ -23,16 +23,16 @@ var enemies = {
     "music":"https://www.youtube.com/embed/JRU6GnETSN4?autoplay=1&version=3&loop=1&rel=0&showinfo=0&autohide=1&playlist=JRU6GnETSN4&vq=tiny",
     "dialog":"Special enemy Temmi appears here to defeat you!!",
     "gold":"150",
-    "act-options":["Check","Flex","Feed Flakes","Talk"],
-    "act-respone":["blah","emep","rerm","i hate minorities"]
+    "act-options":["Flex","Feed Flakes","Talk"],
+    "act-respone":["Temmi looks nervous","emep","rerm","i hate minorities"]
   },  
   "Sans":{
     "sprite":"https://res.cloudinary.com/daniel-griffiths/image/upload/v1473626872/sans_kckyu7.gif",
     "music":"https://www.youtube.com/embed/B2jVbSI9H4o?autoplay=1&version=3&loop=1&rel=0&showinfo=0&autohide=1&playlist=B2jVbSI9H4o&vq=tiny",
     "dialog":"You’re Gonna Have a Bad Time",
     "gold":"150",
-    "act-options":["Check"],
-    "act-respone":["blah"]
+    "act-options":["Check for worms", "Ask for GitHub"],
+    "act-respone":["Sans looks insulted", "Sans offers his QR Code"]
   },  
   "Papyrus":{
     "sprite":"https://res.cloudinary.com/daniel-griffiths/image/upload/v1473626873/papyrus_fk7omx.png",
@@ -40,15 +40,15 @@ var enemies = {
     "dialog":"Papyrus blocks the way!",
     "gold":"150",
     "act-options":["Check","Flirt","Insult"],
-    "act-respone":["one","two","three"]
+    "act-respone":["Papyrus is looking at TikTok","Papyrus blushes","Papyrus blows you a kiss"]
   },  
   "Undyne":{
     "sprite":"https://res.cloudinary.com/daniel-griffiths/image/upload/v1473626870/undyne_sy9laq.gif",
     "music":"https://www.youtube.com/embed/YTy9v9a7Tmo?autoplay=1&version=3&loop=1&rel=0&showinfo=0&autohide=1&playlist=YTy9v9a7Tmo&vq=tiny",
     "dialog":"Undyne prepares for battle!",
     "gold":"150",
-    "act-options":["Check","Talk"],
-    "act-respone":["one","two"]
+    "act-options":["Check","Talk","Rizz up"],
+    "act-respone":["Undyne sharpens her spear ","Hey.","Undyne looks perturbed."]
   }, 
   "Muffet":{
     "sprite":"https://res.cloudinary.com/daniel-griffiths/image/upload/v1473626876/muffet_mgre2y.gif",
@@ -56,7 +56,7 @@ var enemies = {
     "dialog":"The spiders clap to the music.",
     "gold":"0",
     "act-options":["Check","Struggle","Pay 40g"],
-    "act-respone":["one","two","three"]
+    "act-respone":["You just got a little stickier","two","three"]
   }, 
 }
 
@@ -202,6 +202,7 @@ function showRestartDialog(){
     window.location.href = "";
   });
   
+  //manually putting when it resets because otherwise u dont even see anything other than the restart dialogue
   setTimeout(function(){
     window.location.reload();
  }, 3000);
@@ -287,10 +288,9 @@ Mousetrap.bind('enter', function(){
     - when option selected text appear.
    */
   if(currentContext == 'act'){
-
-    if(actionIndex === 0){
-
-    }
+    // menu.style.display = 'none';
+    actionSelector[actionIndex].classList.add('active');
+    currentContext = 'action';
 
     return
 
@@ -332,7 +332,7 @@ Mousetrap.bind('enter', function(){
     //     loopCount: false,
     // });  
     
-    /* force img to stay on the first frame (very hacky) */
+    /* force img to stay on the first frame */
     setInterval(function() {
       document.querySelector('.enemy img').setAttribute('src', document.querySelector('.enemy img').getAttribute('src'))
     },1)

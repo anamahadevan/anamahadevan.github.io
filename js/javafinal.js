@@ -3,11 +3,12 @@ console.clear();
 
 var currentContext = 'action';
 var actionIndex = 0;
-var menuIndex = 1;
+var itemIndex = 0;
 var maxIndex = 3;
 var dialog = '';
 // Not working
 var actionSelector = document.querySelectorAll('#cum');
+var itemSelector = document.querySelectorAll('#balls');
 var heartSpeed = 30;
 // var Mousetrap = 0;
 
@@ -22,79 +23,82 @@ var enemies = {
     "music":"https://www.youtube.com/embed/JRU6GnETSN4?autoplay=1&version=3&loop=1&rel=0&showinfo=0&autohide=1&playlist=JRU6GnETSN4&vq=tiny",
     "dialog":"Special enemy Temmi appears here to defeat you!!",
     "gold":"150",
-    "act-options":["Check","Flex","Feed Flakes","Talk"]
+    "act-options":["Check","Flex","Feed Flakes","Talk"],
+    "act-respone":["blah","emep","rerm","i hate minorities"]
   },  
   "Sans":{
     "sprite":"https://res.cloudinary.com/daniel-griffiths/image/upload/v1473626872/sans_kckyu7.gif",
     "music":"https://www.youtube.com/embed/B2jVbSI9H4o?autoplay=1&version=3&loop=1&rel=0&showinfo=0&autohide=1&playlist=B2jVbSI9H4o&vq=tiny",
     "dialog":"You’re Gonna Have a Bad Time",
     "gold":"150",
-    "act-options":["Check"]
+    "act-options":["Check"],
+    "act-respone":["blah"]
   },  
   "Papyrus":{
     "sprite":"https://res.cloudinary.com/daniel-griffiths/image/upload/v1473626873/papyrus_fk7omx.png",
     "music":"https://www.youtube.com/embed/mqzBv3FYpr0?autoplay=1&version=3&loop=1&rel=0&showinfo=0&autohide=1&playlist=mqzBv3FYpr0&vq=tiny",
     "dialog":"Papyrus blocks the way!",
     "gold":"150",
-    "act-options":["Check","Flirt","Insult"]
+    "act-options":["Check","Flirt","Insult"],
+    "act-respone":["one","two","three"]
   },  
   "Undyne":{
     "sprite":"https://res.cloudinary.com/daniel-griffiths/image/upload/v1473626870/undyne_sy9laq.gif",
     "music":"https://www.youtube.com/embed/YTy9v9a7Tmo?autoplay=1&version=3&loop=1&rel=0&showinfo=0&autohide=1&playlist=YTy9v9a7Tmo&vq=tiny",
     "dialog":"Undyne prepares for battle!",
     "gold":"150",
-    "act-options":["Check","Talk"]
+    "act-options":["Check","Talk"],
+    "act-respone":["one","two"]
   }, 
   "Muffet":{
     "sprite":"https://res.cloudinary.com/daniel-griffiths/image/upload/v1473626876/muffet_mgre2y.gif",
     "music":"https://www.youtube.com/embed/qgFkG80INO0?autoplay=1&version=3&loop=1&rel=0&showinfo=0&autohide=1&playlist=qgFkG80INO0&vq=tiny",
     "dialog":"The spiders clap to the music.",
     "gold":"0",
-    "act-options":["Check","Struggle","Pay 40g"]
+    "act-options":["Check","Struggle","Pay 40g"],
+    "act-respone":["one","two","three"]
   }, 
 }
 
 /* 
 |---------------------------------------
-| On load
+| when the game loads
 |--------------------------------------- 
 */
 
 document.addEventListener("DOMContentLoaded", function() {
 
-  // Sets the first action selector as active
+  // starts off the first action selector as active
   actionSelector[actionIndex].classList.add('active')
+  itemSelector[itemIndex].classList.add('active')
 
+  // helper function so that enemies are loaded in randomly
   function rand(obj) {
-  var result;
-  var count = 0;
-  for (var prop in obj) {
-  if (Math.random() < 1 / ++count)
-  result = prop;
-  }
-  return result;
+    var result;
+    var count = 0;
+    for (var prop in obj) {
+    if (Math.random() < 1 / ++count)
+    result = prop;
+    }
+    return result;
   }
   
+  // loads in the enemy , with a different character every single time
   function loadEnemy(enemies) {
-  var randomEnemy = rand(enemies);
-  var sprite = enemies[randomEnemy]['sprite'];
-  music = enemies[randomEnemy]['music'];
-  gold = enemies[randomEnemy]['gold'];
-  dialog = enemies[randomEnemy]['dialog'];
-    
-    /* Asgore is special ;) */
-    if (randomEnemy == 'Asgore') {
-      document.querySelector('.action-option:last-child').style.display = 'none';
-      maxIndex = 3;
-    }
-    
-    var menuAct = document.querySelector('.menu-act');
-    if (menuAct) {
-      enemies[randomEnemy]['act-options'].forEach(function (value) {
-        menuAct.insertAdjacentHTML('beforeend', '<li class="menu-option">* ' + value + '</li>');
-      });
-    }
-    
+    var randomEnemy = rand(enemies);
+    var sprite = enemies[randomEnemy]['sprite'];
+    music = enemies[randomEnemy]['music'];
+    gold = enemies[randomEnemy]['gold'];
+    dialog = enemies[randomEnemy]['dialog'];
+
+      
+      var menuAct = document.querySelector('.menu-act');
+      if (menuAct) {
+        enemies[randomEnemy]['act-options'].forEach(function (value) {
+          menuAct.insertAdjacentHTML('beforeend', '<li class="menu-option" id="piss">* ' + value + '</li>');
+        });
+      }
+      
     document.querySelector('.undertale').classList.add(randomEnemy);
     document.querySelector('.enemy img').setAttribute('src', sprite);
     
@@ -148,22 +152,38 @@ window.addEventListener('resize', function(evt) {
 */
   
   /* move left */
-function prevAction(actionMenuItem){
+function prevAction(){
   if(actionIndex > 0 && currentContext == 'action'){
     actionSelector[actionIndex].classList.remove('active');
     actionIndex--;
-    actionSelector[actionIndex].classList.add('active');
-    console.log(actionIndex);
+    actionSelector[actionIndex].classList.add('active')
   }
 }
 
 /* move right */
-function nextAction(actionMenuItem){
+function nextAction(){
   if(actionIndex < maxIndex && currentContext == 'action'){
     actionSelector[actionIndex].classList.remove('active');
     actionIndex++;
-    actionSelector[actionIndex].classList.add('active');
-    console.log(actionIndex);
+    actionSelector[actionIndex].classList.add('active')
+  }
+}
+
+function nextItem(){
+  var itemSelector = document.querySelectorAll('#balls');
+  if(itemIndex < 1) {
+    itemSelector[itemIndex].classList.remove('active')
+    itemIndex++
+    itemSelector[itemIndex].classList.add('active')
+  }
+}
+
+function prevItem(){
+  var itemSelector = document.querySelectorAll('#balls');
+  if(itemIndex > 0) {
+    itemSelector[itemIndex].classList.remove('active')
+    itemIndex--
+    itemSelector[itemIndex].classList.add('active')
   }
 }
 
@@ -185,8 +205,8 @@ function showRestartDialog(){
 
 /* 
 |---------------------------------------
-| BINDING ENTER BUTTON TO CONFIRM--
-When the "enter" key is pressed, the code checks the current context of the game 
+| entering to confirm-
+when  "enter" key is pressed,  code checks the current context of the game 
 (which menu the player is currently on), and performs different actions based on 
 the context.
 
@@ -203,14 +223,23 @@ If the player is in the "mercy" menu and presses "enter", the game ends and show
 Mousetrap.bind('enter', function(){ 
 
   /* set the new content and show the relevant menu */
-  if(currentContext == 'action'){
+  if(currentContext === 'action'){
     currentContext = actionSelector[actionIndex].getAttribute('data-context');
     document.querySelector('.menu-' + currentContext).style.display = 'block'; 
     document.querySelector('.action-option-' + actionIndex).classList.remove('active');
-    console.log(currentContext);
+    return
   }
 
-  /* FIGHT */
+  /*
+  FIGHT TODO:
+  - make sure menu is navigatable after fight sequence (reset action index)
+  - put in fight animations ( basically hardcode )
+  -fix moving bar..... somehow
+  - should increment hp in some way
+   */
+
+
+  /* choosing to fight */
   if(currentContext == 'fight'){
 
       /* animate the attack line */
@@ -225,7 +254,7 @@ Mousetrap.bind('enter', function(){
       /* reset attack line position */
       document.querySelector('.attack-line').removeAttribute("style");
     
-      /* Its now the enemies turn! */
+      /* now that attack has been completed , it is the enemies turn inser animation */
       document.querySelector('.menu-fight').style.display = 'none';
       document.querySelector('.menu-fight-enemy-turn').style.display = 'block';
       document.querySelector('.menu-fight-enemy-turn').classList.add('menu-tall');
@@ -242,26 +271,48 @@ Mousetrap.bind('enter', function(){
         document.querySelector('.action-option-' + actionIndex).classList.add('active');  
         currentContext = 'action';
       }, 3000);
+
+      return
+
     }
 
-  /* ACT */
+  /*
+  ACT TODO:
+    - be able to select options
+    - when option selected text appear.
+   */
   if(currentContext == 'act'){
 
+    if(actionIndex === 0){
+
+    }
+
+    return
+
   }
 
-  /* ITEM */    
+  /* ITEM TODO:
+  - item increases hp counter 10p
+  */    
   if(currentContext == 'item'){
-
+    document.querySelector('.hp-min').textContent = parseInt(document.querySelector('.hp-min').textContent) + 10
+    // code below gets back to menu
+    var menu = document.querySelector('.menu-' + currentContext);
+    menu.style.display = 'none';
+    actionSelector[actionIndex].classList.add('active');
+    currentContext = 'action';
   }
 
-  /* MERCY */
+  /* MERCY TODO:
+  - when selected gives message 
+  */
   if(currentContext == 'mercy'){
     document.querySelector('.enemy').style.opacity = '0.3';
     document.querySelector('.audio').remove();
     document.querySelector('.menu-mercy').style.color = 'white';
     
     /* play sound effect */
-    var audio = new Audio('http://danielgriffiths.me/project-files/undertale/spare.mp3');
+    var audio = new Audio('/img/spare.mp3');
     audio.play();
     
     /* show spare dialog  */ 
@@ -332,6 +383,9 @@ Mousetrap.bind('esc', function() {
     if(currentContext == 'action'){
       nextAction(this);
     }
+    if(currentContext == 'item') {
+      nextItem()
+    }
     
     if(currentContext == 'fight-enemy-turn'){
       heartMove('left','+');
@@ -342,6 +396,9 @@ Mousetrap.bind('esc', function() {
   Mousetrap.bind('left', function() { 
     if(currentContext == 'action'){
       prevAction(this);
+    }
+    if(currentContext == 'item') {
+      prevItem()
     }
     
     if(currentContext == 'fight-enemy-turn'){

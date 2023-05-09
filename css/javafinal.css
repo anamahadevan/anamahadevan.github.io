@@ -96,16 +96,7 @@
     z-index: 10;
     box-sizing: border-box;
   }
-  /* ASGORE ONLY */
-  .Asgore {
-    background: linear-gradient(to bottom, #000 50%, #1e061e 100%);
-  }
-  .Asgore .enemy img {
-    width: 430px;
-  }
-  .Asgore .square {
-    border: 0;
-  }
+
   /* other enemies */
   .Papyrus .square {
     border: 0;
@@ -145,12 +136,10 @@
     width: 184px;
   }
 
-  .menu-option .active{
-    background: url("https://res.cloudinary.com/daniel-griffiths/image/upload/v1473626867/heart_lpr6lv.png") #000;
+  .menu-option.active{
     background-repeat: no-repeat;
     background-position: 7px center;
     color: #ff0;
-    border: 2px solid #ff0;
   }
 
   .menu-hidden {

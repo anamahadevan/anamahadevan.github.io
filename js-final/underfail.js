@@ -323,6 +323,7 @@ Mousetrap.bind('enter', function(){
   if(currentContext == 'act'){
     // menu.style.display = 'none';
     actSelector[actIndex].classList.add('active');
+    document.querySelector('.menu-act').style.display = 'none';
     // document.querySelector('#piss')
     currentContext = 'action';
 

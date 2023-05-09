@@ -201,6 +201,11 @@ function showRestartDialog(){
   restart.addEventListener('click', function() {
     window.location.href = "";
   });
+  
+  setTimeout(function(){
+    window.location.reload();
+ }, 3000);
+
 }
 
 /* 
@@ -308,24 +313,24 @@ Mousetrap.bind('enter', function(){
   */
   if(currentContext == 'mercy'){
     document.querySelector('.enemy').style.opacity = '0.3';
-    document.querySelector('.audio').remove();
+    // document.querySelector('.audio').remove();
     document.querySelector('.menu-mercy').style.color = 'white';
     
     /* play sound effect */
-    var audio = new Audio('/img/spare.mp3');
-    audio.play();
+    // var audio = new Audio('/img/spare.mp3');
+    // audio.play();
     
     /* show spare dialog  */ 
-    var spareDialog = '* YOU WON! <br>* You earned 0 XP and ' + gold + ' gold.';
+    var spareDialog = '* YOU WON! <br>* You earned 0 XP and 0 gold.';
     
-    var typed = new Typed('.menu-mercy', {
-        strings: [spareDialog], 
-        showCursor: false, 
-        cursorChar: '', 
-        typeSpeed: 20,
-        loop: false,
-        loopCount: false,
-    });  
+    // var typed = new typed('.menu-mercy', {
+    //     strings: [spareDialog], 
+    //     showCursor: false, 
+    //     cursorChar: '', 
+    //     typeSpeed: 20,
+    //     loop: false,
+    //     loopCount: false,
+    // });  
     
     /* force img to stay on the first frame (very hacky) */
     setInterval(function() {

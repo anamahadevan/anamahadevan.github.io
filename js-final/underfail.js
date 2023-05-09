@@ -73,7 +73,6 @@ document.addEventListener("DOMContentLoaded", function() {
   // starts off the first action selector as active
   actionSelector[actionIndex].classList.add('active')
   itemSelector[itemIndex].classList.add('active')
-  actSelector[actIndex].classList.add('active')
 
   // helper function so that enemies are loaded in randomly
   function rand(obj) {
@@ -323,8 +322,8 @@ Mousetrap.bind('enter', function(){
    */
   if(currentContext == 'act'){
     // menu.style.display = 'none';
-    document.querySelector('#piss')
-    actionSelector[actionIndex].classList.add('active');
+    actSelector[actIndex].classList.add('active');
+    // document.querySelector('#piss')
     currentContext = 'action';
 
     return

@@ -4,11 +4,13 @@ console.clear();
 var currentContext = 'action';
 var actionIndex = 0;
 var itemIndex = 0;
+var actIndex = 0;
 var maxIndex = 3;
 var dialog = '';
 // Not working
 var actionSelector = document.querySelectorAll('#cum');
 var itemSelector = document.querySelectorAll('#balls');
+var actSelector = document.querySelectorAll('#piss')
 var heartSpeed = 30;
 // var Mousetrap = 0;
 
@@ -71,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // starts off the first action selector as active
   actionSelector[actionIndex].classList.add('active')
   itemSelector[itemIndex].classList.add('active')
+  actSelector[actIndex].classList.add('active')
 
   // helper function so that enemies are loaded in randomly
   function rand(obj) {
@@ -169,6 +172,7 @@ function nextAction(){
   }
 }
 
+/* move up and down within the item menu  */
 function nextItem(){
   var itemSelector = document.querySelectorAll('#balls');
   if(itemIndex < 1) {
@@ -184,6 +188,25 @@ function prevItem(){
     itemSelector[itemIndex].classList.remove('active')
     itemIndex--
     itemSelector[itemIndex].classList.add('active')
+  }
+}
+
+/* move up and down within the act menu */
+function nextItem(){
+  var actSelector = document.querySelectorAll('#piss');
+  if(actIndex < 1) {
+    actSelector[actIndex].classList.remove('active')
+    actIndex++
+    actSelector[actIndex].classList.add('active')
+  }
+}
+
+function prevItem(){
+  var itemSelector = document.querySelectorAll('#piss');
+  if(actIndex > 0) {
+    actSelector[actIndex].classList.remove('active')
+    actIndex--
+    actSelector[actIndex].classList.add('active')
   }
 }
 
@@ -249,14 +272,23 @@ Mousetrap.bind('enter', function(){
   if(currentContext == 'fight'){
 
       /* animate the attack line */
-      document.querySelector('.attack-line').animate([
+      // document.querySelector('.attack-line').animate([
+      //   {left: '0'},
+      //   {left: '97%'}
+      // ], {
+      //   duration: 1000,
+      //   fill: 'forwards'
+      // });
+      const attackLine = document.querySelector('.attack-line');
+
+      attackLine.animate([
         {left: '0'},
         {left: '97%'}
       ], {
         duration: 1000,
         fill: 'forwards'
       });
-    
+      
       /* reset attack line position */
       document.querySelector('.attack-line').removeAttribute("style");
     
@@ -274,7 +306,9 @@ Mousetrap.bind('enter', function(){
       setTimeout(function(){
         document.querySelector('.menu-fight-enemy-turn').style.display = 'none';
         document.querySelector('.menu-fight-enemy-turn').classList.remove('menu-tall');
-        document.querySelector('.action-option-' + actionIndex).classList.add('active');  
+        var menu = document.querySelector('.menu-' + currentContext);
+        menu.style.display = 'none';
+        actionSelector[actionIndex].classList.add('active');
         currentContext = 'action';
       }, 3000);
 
@@ -289,6 +323,7 @@ Mousetrap.bind('enter', function(){
    */
   if(currentContext == 'act'){
     // menu.style.display = 'none';
+    document.querySelector('#piss')
     actionSelector[actionIndex].classList.add('active');
     currentContext = 'action';
 

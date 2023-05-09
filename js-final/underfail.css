@@ -154,10 +154,11 @@
   |--------------------------------------- 
   */
   .menu-fight {
-    background-image: url(/img/fight.png);
+    background-image: url(/js-final/fight.png);
   }
+
   .battle-heart {
-    background: url("https://res.cloudinary.com/daniel-griffiths/image/upload/v1473626867/heart_lpr6lv.png");
+    background: url("/js-final/heart.png");
     background-repeat: no-repeat;
     background-position: center center;
     width: 20px;

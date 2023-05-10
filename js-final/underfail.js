@@ -10,7 +10,6 @@ var dialog = '';
 // Not working
 var actionSelector = document.querySelectorAll('#cum');
 var itemSelector = document.querySelectorAll('#balls');
-var actSelector = document.querySelectorAll('#piss');
 var heartSpeed = 30;
 // var Mousetrap = 0;
 
@@ -113,6 +112,9 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   
   loadEnemy(enemies);
+
+  var actSelector = document.querySelectorAll('#piss');
+  actSelector[actIndex].classList.add('active');
   
   /* text animation function */
   var typedStrings = dialog.split('');
@@ -198,8 +200,7 @@ function prevItem(){
 
 /* move up and down within the act menu */
 function nextAct(){
-  var actSelector = document.querySelectorAll('#piss');
-  if(actIndex < 1) {
+  if(actIndex < (actSelector.length - 1)) {
     actSelector[actIndex].classList.remove('active');
     actIndex++;
     actSelector[actIndex].classList.add('active');
@@ -207,7 +208,6 @@ function nextAct(){
 }
 
 function prevAct(){
-  var actSelector = document.querySelectorAll('#piss');
   if(actIndex > 0) {
     actSelector[actIndex].classList.remove('active');
     actIndex--;
@@ -399,11 +399,8 @@ Mousetrap.bind('enter', function(){
    */
   if(currentContext == 'act'){
     // menu.style.display = 'none';
-   
-    actSelector[actIndex].classList.add('active');
 
     if(currentContext == 'act'){
-      console.log("actSelector:", actSelector);
       console.log("actIndex:", actIndex);
       if (actSelector[actIndex]) {
         actSelector[actIndex].classList.add('active');
@@ -501,9 +498,6 @@ Mousetrap.bind('esc', function() {
     if(currentContext == 'fight-enemy-turn'){
       heartMove('top','-');
     }
-    if(currentContext == 'act') {
-      prevAct()
-    }
     
   });
   
@@ -511,9 +505,6 @@ Mousetrap.bind('esc', function() {
   Mousetrap.bind('down', function() {   
     if(currentContext == 'fight-enemy-turn'){
       heartMove('top','+');
-    }
-    if(currentContext == 'act') {
-      nextAct()
     }
   });
   
@@ -524,6 +515,9 @@ Mousetrap.bind('esc', function() {
     }
     if(currentContext == 'item') {
       nextItem()
+    }
+    if(currentContext == 'act') {
+      nextAct()
     }
     if(currentContext == 'fight-enemy-turn'){
       heartMove('left','+');
@@ -537,6 +531,9 @@ Mousetrap.bind('esc', function() {
     }
     if(currentContext == 'item') {
       prevItem()
+    }
+    if(currentContext == 'act') {
+      prevAct()
     }
     if(currentContext == 'fight-enemy-turn'){
       heartMove('left','-');

@@ -319,15 +319,15 @@ Mousetrap.bind('enter', function(){
       // Load the heart image
       if(enemyname === "Temmie"){
         var img = new Image();
-        img.src = "/js-final/bone.png";
+        img.src = "/js-final/paw.png";
       }
       else if(enemyname === "Sans"){
         var img = new Image();
-        img.src = "/js-final/bone.png";
+        img.src = "/js-final/bone2.png";
       }
       else if(enemyname === "Papyrus"){
         var img = new Image();
-        img.src = "/js-final/bone.png";
+        img.src = "/js-final/bone1.png";
       }
       else if(enemyname === "Undyne"){
         var img = new Image();

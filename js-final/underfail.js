@@ -399,25 +399,8 @@ Mousetrap.bind('enter', function(){
     - when option selected text appear.
    */
   if(currentContext == 'act'){
-    // menu.style.display = 'none';
-    console.log("actIndex:", actIndex);
-    
-      if (actSelector[actIndex]) {
-        actSelector[actIndex].classList.add('active');
-      }
-      document.querySelector('.menu-act').style.display = 'none';
-      currentContext = 'action';
-      
-      for (let i = 0; i >= actIndex; i++) { 
-        const banta = enemies['act-response'][i];
-        console.log(banta);
-      }
-      
-
-
-    // document.querySelector('.menu-act').style.display = 'none';
-    // document.querySelector('#piss')
-    // currentContext = 'action';
+    console.log('big cum')
+    console.log(enemies[randomEnemy])
 
     return
 

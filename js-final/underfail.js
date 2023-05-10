@@ -97,6 +97,7 @@ document.addEventListener("DOMContentLoaded", function() {
     gold = enemies[randomEnemy]['gold'];
     dialog = enemies[randomEnemy]['dialog'];
     enemyname = enemies[randomEnemy]['name'];
+    
 
       //for each act options
       var menuAct = document.querySelector('.menu-act');
@@ -399,22 +400,24 @@ Mousetrap.bind('enter', function(){
    */
   if(currentContext == 'act'){
     // menu.style.display = 'none';
-
-    if(currentContext == 'act'){
-      console.log("actIndex:", actIndex);
+    console.log("actIndex:", actIndex);
+    
       if (actSelector[actIndex]) {
         actSelector[actIndex].classList.add('active');
       }
       document.querySelector('.menu-act').style.display = 'none';
       currentContext = 'action';
-    
-      return;
-    }
-    
+      
+      for (let i = 0; i >= actIndex; i++) { 
+        const banta = enemies['act-response'][i];
+        console.log(banta);
+      }
+      
 
-    document.querySelector('.menu-act').style.display = 'none';
+
+    // document.querySelector('.menu-act').style.display = 'none';
     // document.querySelector('#piss')
-    currentContext = 'action';
+    // currentContext = 'action';
 
     return
 

@@ -260,9 +260,18 @@ Mousetrap.bind('enter', function(){
   if(currentContext === 'action'){
     currentContext = actionSelector[actionIndex].getAttribute('data-context');
     document.querySelector('.menu-' + currentContext).style.display = 'block'; 
-    document.querySelector('.action-option-' + actionIndex).classList.remove('active');
-    return
+
+    const actionOption = document.querySelector('.action-option-' + actionIndex);
+    if (actionOption) {
+      actionOption.classList.remove('active');
+    } else {
+      console.error('Could not find element with class "action-option-' + actionIndex + '"');
+    }
+
+    return;
   }
+
+  console.error('Invalid current context:', currentContext);
 
   /*
   FIGHT TODO:
@@ -277,13 +286,6 @@ Mousetrap.bind('enter', function(){
   if(currentContext == 'fight'){
 
       /* animate the attack line */
-      // document.querySelector('.attack-line').animate([
-      //   {left: '0'},
-      //   {left: '97%'}
-      // ], {
-      //   duration: 1000,
-      //   fill: 'forwards'
-      // });
       const attackLine = document.querySelector('.attack-line');
 
       attackLine.animate([
@@ -329,11 +331,11 @@ Mousetrap.bind('enter', function(){
       }
       else if(enemyname === "Undyne"){
         var img = new Image();
-        img.src = "/js-final/heart.png";
+        img.src = "/js-final/bubb.png";
       }
       else if(enemyname === "Muffet"){
         var img = new Image();
-        img.src = "/js-final/heart.png";
+        img.src = "/js-final/spyda.png";
       }
 
 		// Set the initial position and velocity of the items
@@ -375,23 +377,8 @@ Mousetrap.bind('enter', function(){
 		// Call the draw function every 10 milliseconds
 		setInterval(draw, 10);
     
-    // checks if item 1&2 hits the heart
-    // Get the bounding box of the first element 
-    const element1 = document.getElementById('battle-heart'); 
-    const rect1 = element1.getBoundingClientRect(); 
-  
-    // Get the bounding box of the second element 
-    const element2 = document.getElementById('item1'); 
-    const rect2 = element2.getBoundingClientRect(); 
-    
-    // Check if the two elements overlap 
-    const overlap = !(rect1.right < rect2.left ||  
-                      rect1.left > rect2.right ||  
-                      rect1.bottom < rect2.top ||  
-                      rect1.top > rect2.bottom); 
-    
-    // Log the result 
-    console.log(overlap);
+    // WRITE CODE HERE WHEN I FIGURE HOW THE FUCK TO IDENTIFY IF IT COLLIDES
+
 
       /* just a placeholder, hide the battle screen after 3 seconds */
       setTimeout(function(){

@@ -10,7 +10,7 @@ var dialog = '';
 // Not working
 var actionSelector = document.querySelectorAll('#cum');
 var itemSelector = document.querySelectorAll('#balls');
-var actSelector = document.querySelectorAll('#piss')
+var actSelector = document.querySelectorAll('#piss');
 var heartSpeed = 30;
 // var Mousetrap = 0;
 
@@ -173,7 +173,7 @@ function nextAction(){
   if(actionIndex < maxIndex && currentContext == 'action'){
     actionSelector[actionIndex].classList.remove('active');
     actionIndex++;
-    actionSelector[actionIndex].classList.add('active')
+    actionSelector[actionIndex].classList.add('active');
   }
 }
 
@@ -181,37 +181,37 @@ function nextAction(){
 function nextItem(){
   var itemSelector = document.querySelectorAll('#balls');
   if(itemIndex < 1) {
-    itemSelector[itemIndex].classList.remove('active')
-    itemIndex++
-    itemSelector[itemIndex].classList.add('active')
+    itemSelector[itemIndex].classList.remove('active');
+    itemIndex++;
+    itemSelector[itemIndex].classList.add('active');
   }
 }
 
 function prevItem(){
   var itemSelector = document.querySelectorAll('#balls');
   if(itemIndex > 0) {
-    itemSelector[itemIndex].classList.remove('active')
-    itemIndex--
-    itemSelector[itemIndex].classList.add('active')
+    itemSelector[itemIndex].classList.remove('active');
+    itemIndex--;
+    itemSelector[itemIndex].classList.add('active');
   }
 }
 
 /* move up and down within the act menu */
-function nextItem(){
+function nextAct(){
   var actSelector = document.querySelectorAll('#piss');
   if(actIndex < 1) {
-    actSelector[actIndex].classList.remove('active')
-    actIndex++
-    actSelector[actIndex].classList.add('active')
+    actSelector[actIndex].classList.remove('active');
+    actIndex++;
+    actSelector[actIndex].classList.add('active');
   }
 }
 
-function prevItem(){
-  var itemSelector = document.querySelectorAll('#piss');
+function prevAct(){
+  var actSelector = document.querySelectorAll('#piss');
   if(actIndex > 0) {
-    actSelector[actIndex].classList.remove('active')
-    actIndex--
-    actSelector[actIndex].classList.add('active')
+    actSelector[actIndex].classList.remove('active');
+    actIndex--;
+    actSelector[actIndex].classList.add('active');
   }
 }
 
@@ -270,8 +270,6 @@ Mousetrap.bind('enter', function(){
 
     return;
   }
-
-  console.error('Invalid current context:', currentContext);
 
   /*
   FIGHT TODO:
@@ -401,7 +399,22 @@ Mousetrap.bind('enter', function(){
    */
   if(currentContext == 'act'){
     // menu.style.display = 'none';
+   
     actSelector[actIndex].classList.add('active');
+
+    if(currentContext == 'act'){
+      console.log("actSelector:", actSelector);
+      console.log("actIndex:", actIndex);
+      if (actSelector[actIndex]) {
+        actSelector[actIndex].classList.add('active');
+      }
+      document.querySelector('.menu-act').style.display = 'none';
+      currentContext = 'action';
+    
+      return;
+    }
+    
+
     document.querySelector('.menu-act').style.display = 'none';
     // document.querySelector('#piss')
     currentContext = 'action';
@@ -488,12 +501,19 @@ Mousetrap.bind('esc', function() {
     if(currentContext == 'fight-enemy-turn'){
       heartMove('top','-');
     }
+    if(currentContext == 'act') {
+      prevAct()
+    }
+    
   });
   
   /* down key */
   Mousetrap.bind('down', function() {   
     if(currentContext == 'fight-enemy-turn'){
       heartMove('top','+');
+    }
+    if(currentContext == 'act') {
+      nextAct()
     }
   });
   
@@ -505,7 +525,6 @@ Mousetrap.bind('esc', function() {
     if(currentContext == 'item') {
       nextItem()
     }
-    
     if(currentContext == 'fight-enemy-turn'){
       heartMove('left','+');
     }
@@ -519,7 +538,6 @@ Mousetrap.bind('esc', function() {
     if(currentContext == 'item') {
       prevItem()
     }
-    
     if(currentContext == 'fight-enemy-turn'){
       heartMove('left','-');
     }

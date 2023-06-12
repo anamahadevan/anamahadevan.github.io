@@ -1,79 +1,4 @@
 @charset "UTF-8";
-
-/* =================================================================== 
- * Hudson Main Stylesheet
- * Template Ver. 1.0.0
- * 04-03-2023
- * ------------------------------------------------------------------
- *
- * TOC:
- * # SETTINGS
- *      ## fonts 
- *      ## colors
- *      ## spacing and typescale
- *      ## grid variables
- * # CSS RESET
- * # GRID
- * # BASE SETUP
- * # UTILITY CLASSES
- * # TYPOGRAPHY 
- *      ## base type styles
- *      ## additional typography & helper classes
- *      ## lists
- *      ## media 
- *      ## spacing
- * # PRELOADER
- *      ## page loaded
- * # FORM 
- *      ## style placeholder text
- * # BUTTONS
- * # TABLE
- * # COMPONENTS
- *      ## pagination
- *      ## alert box 
- *      ## skillbars
- *      ## stats tabs
- * # PROJECT-WIDE SHARED STYLES
- *      ## section header
- *      ## social list
- *      ## swiper overrides
- *      ## glightbox overrides
- * # GRID-BASED LAYOUTS
- *      ## grid block
- *      ## list grid
- * # PAGE WRAP
- * # SITE HEADER
- *      ## logo
- *      ## main navigation
- *      ## mobile menu toggle
- * # INTRO
- *      ## intro content
- *      ## intro btn cv download
- *      ## intro social
- *      ## intro scroll down
- *      ## intro transitions
- * # ABOUT
- *      ## about blocks
- * # WORKS
- *      ## folio entries 
- *      ## testimonials
- * # NUMBERS
- * # FOOTER
- *      ## copyright
- *      ## go top
- *
- * ------------------------------------------------------------------ */
-
-
-/* ===================================================================
- * # SETTINGS
- *
- *
- * ------------------------------------------------------------------- */
-
-/* ------------------------------------------------------------------- 
- * ## fonts 
- * ------------------------------------------------------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 :root {
@@ -90,9 +15,8 @@
  * ------------------------------------------------------------------- */
 :root {
 
-  /* color-1(#C73E1D)
-   * color-2(#2F352B)
-   * color-3(#1A1A1A)
+  /* 
+  first colors
    */
     --color-1: hsla(12, 75%, 45%, 1);
     --color-2: hsla(96, 10%, 19%, 1);
@@ -100,12 +24,12 @@
 
   /* theme color variations
    */
-    --color-1-lightest: hsla(12, 75%, 75%, 1);
-    --color-1-lighter : hsla(12, 75%, 65%, 1);
-    --color-1-light   : hsla(12, 75%, 55%, 1);
-    --color-1-dark    : hsla(12, 75%, 35%, 1);
-    --color-1-darker  : hsla(12, 75%, 25%, 1);
-    --color-1-darkest : hsla(12, 75%, 15%, 1);
+    --color-1-lightest: rgb(143, 239, 218);
+    --color-1-lighter : rgb(99, 229, 233);
+    --color-1-light   : rgb(54, 206, 226);
+    --color-1-dark    : rgb(22, 152, 156);
+    --color-1-darker  : rgb(16, 102, 112);
+    --color-1-darkest : rgb(10, 59, 67);
 
     --color-2-lightest: hsla(96, 10%, 49%, 1);
     --color-2-lighter : hsla(96, 10%, 39%, 1);
@@ -2834,7 +2758,7 @@ td:last-child {
 }
 
 .glightbox-container .gslide-description {
-    background: rgb(0, 0, 0);
+    background: rgb(33, 164, 162);
     width     : 100%;
     text-align: center;
 }

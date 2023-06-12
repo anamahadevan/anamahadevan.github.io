@@ -1,6 +1,17 @@
 /* clear the codepen console */
 console.clear();
 
+// helper function so that enemies are loaded in randomly
+function rand(obj) {
+  var result;
+  var count = 0;
+  for (var prop in obj) {
+  if (Math.random() < 1 / ++count)
+  result = prop;
+  }
+  return result;
+}
+
 var currentContext = 'action';
 var actionIndex = 0;
 var itemIndex = 0;
@@ -26,7 +37,7 @@ var enemies = {
     "dialog":"Special enemy Temmi appears here to defeat you!!",
     "gold":"150",
     "act-options":["Flex","Feed Flakes","Talk"],
-    "act-respone":["Temmi looks nervous","emep","rerm","i hate minorities"]
+    "act-response":["Temmi looks nervous","emep","rerm","i hate minorities"]
   },  
   "Sans":{
     "name": "Sans",
@@ -35,7 +46,7 @@ var enemies = {
     "dialog":"You’re Gonna Have a Bad Time",
     "gold":"150",
     "act-options":["Check for worms", "Ask for GitHub"],
-    "act-respone":["Sans looks insulted", "Sans offers his QR Code"]
+    "act-response":["Sans looks insulted", "Sans offers his QR Code"]
   },  
   "Papyrus":{
     "name": "Papyrus",
@@ -44,7 +55,7 @@ var enemies = {
     "dialog":"Papyrus blocks the way!",
     "gold":"150",
     "act-options":["Check","Flirt","Insult"],
-    "act-respone":["Papyrus is looking at TikTok","Papyrus blushes","Papyrus blows you a kiss"]
+    "act-response":["Papyrus is looking at TikTok","Papyrus blushes","Papyrus blows you a kiss"]
   },  
   "Undyne":{
     "name": "Undyne",
@@ -53,7 +64,7 @@ var enemies = {
     "dialog":"Undyne prepares for battle!",
     "gold":"150",
     "act-options":["Check","Talk","Rizz up"],
-    "act-respone":["Undyne sharpens her spear ","Hey.","Undyne looks perturbed."]
+    "act-response":["Undyne sharpens her spear ","Hey.","Undyne looks perturbed."]
   }, 
   "Muffet":{
     "name": "Muffet",
@@ -62,9 +73,11 @@ var enemies = {
     "dialog":"The spiders clap to the music.",
     "gold":"0",
     "act-options":["Check","Struggle","Pay 40g"],
-    "act-respone":["You just got a little stickier","two","three"]
+    "act-response":["You just got a little stickier","two","three"]
   }, 
 }
+
+var randomEnemy = rand(enemies);
 
 /* 
 |---------------------------------------
@@ -77,21 +90,9 @@ document.addEventListener("DOMContentLoaded", function() {
   // starts off the first action selector as active
   actionSelector[actionIndex].classList.add('active')
   itemSelector[itemIndex].classList.add('active')
-
-  // helper function so that enemies are loaded in randomly
-  function rand(obj) {
-    var result;
-    var count = 0;
-    for (var prop in obj) {
-    if (Math.random() < 1 / ++count)
-    result = prop;
-    }
-    return result;
-  }
   
   // loads in the enemy , with a different character every single time
-  function loadEnemy(enemies) {
-    var randomEnemy = rand(enemies);
+  function loadEnemy(enemies,randomEnemy) {
     var sprite = enemies[randomEnemy]['sprite'];
     music = enemies[randomEnemy]['music'];
     gold = enemies[randomEnemy]['gold'];
@@ -112,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
   }
   
-  loadEnemy(enemies);
+  loadEnemy(enemies,randomEnemy);
 
   var actSelector = document.querySelectorAll('#piss');
   actSelector[actIndex].classList.add('active');
@@ -150,7 +151,6 @@ window.addEventListener('resize', function(evt) {
   document.body.style.width = maxWidth * scale + 'px';
   document.body.style.height = maxHeight * scale + 'px';
 });
-
 
 
 /* 
@@ -399,8 +399,10 @@ Mousetrap.bind('enter', function(){
     - when option selected text appear.
    */
   if(currentContext == 'act'){
-    console.log('big cum')
-    console.log(enemies[randomEnemy])
+    
+    console.log(enemies[randomEnemy]['act-response'][actIndex])
+    var menuAct = document.querySelector('.menu-act')
+    menuAct.style.opacity = 0
 
     return
 

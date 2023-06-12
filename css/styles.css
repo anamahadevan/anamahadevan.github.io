@@ -3185,7 +3185,7 @@ td:last-child {
         height       : var(--header-height);
         box-shadow   : var(--box-shadow);
         border       : none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        border-bottom: 1px solid rgba(47, 132, 157, 0.03);
     }
 
     .s-header__logo {

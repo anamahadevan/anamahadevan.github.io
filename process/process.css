@@ -64,16 +64,24 @@ body {
 /* article settings */
     .article{
         display: flex;
-        padding-left: 1em;
+        justify-content: space-around;
+
     }
 
     .blog-format {
-        padding-left: 1em;
+        justify-content: space-around;
+        padding: 1em;
     }
+
+
+    /* trying to create seamless photo integration */
 
     .blog-format ul{
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
+        list-style: none;
+        padding-right: 1em;
     }
 
     .blog-format li {

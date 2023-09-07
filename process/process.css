@@ -59,6 +59,7 @@ body {
         justify-content: flex-start;
         flex-direction: row;
         padding-left: 1em;
+        padding-top: 1em;
     }
 
 /* article settings */
@@ -70,7 +71,7 @@ body {
 
     .blog-format {
         justify-content: space-around;
-        padding: 1em;
+        padding: 2em;
     }
 
 
@@ -101,3 +102,8 @@ body {
     vertical-align: bottom;
     }
 
+    /*images that need to be big*/
+    .fullsize{
+        height: 70vh;
+        object-fit: cover;
+    }

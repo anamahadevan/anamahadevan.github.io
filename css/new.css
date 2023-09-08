@@ -1,0 +1,66 @@
+
+/* ---- MAIN SETTINGS ----- */
+
+.main-wrapper{
+    display:flex;
+}
+
+/* consistent sizing for each function */
+.section{
+    height: 100vh;
+	width: 100vw;
+	flex-shrink: 0;
+}
+
+
+/* ---- NAVIGATION -- S1--- */
+.section-1 {
+	display: flex;
+	/* background-image: url(/img/intro-bg.jpg);
+	background-repeat: no-repeat; */
+  }
+
+.main {
+    position: relative;
+    padding: 10em;
+	box-shadow: rgb(50 50 93 / 10%) 0 30px 60px -12px,
+	  rgb(0 0 0 / 15%) 0 18px 36px -18px;
+  }
+
+.main-nav li{
+    list-style-type: none;
+}
+
+/* ---- PROJECT GALLERY ---S1--- */
+
+.gallery{
+    display: flex;
+	height: 100vh;
+    width: 35%;
+}
+
+/* vertically scrolling columns */
+.col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+ img {
+	/* min-height: 300px; */
+	height: auto;
+	width: 300px;
+	object-fit: cover;
+	background-color: black;
+  }
+
+.col-1 img,
+.col-3 img {
+    padding: 0.2rem 0.5rem;
+}
+  
+.col-2 img {
+    padding: 0.2rem 0;
+}
+  

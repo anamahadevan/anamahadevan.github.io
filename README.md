@@ -3,10 +3,8 @@
 
 
 
-## projects:
-* html
-* java
-* css
+## important links:
+* [main page](anamahadevan.me)
 
 ## in-class assingments:
 * [ica1](https://docs.google.com/document/d/15EPhaM7IeliXMuuJs00CyBdzzLgC-jN4Yqa44iOBdj0/edit?usp=sharing)
@@ -18,15 +16,6 @@
 * [ica6-part1](https://anamahadevan.github.io/ica/ica6-part1)
 * [ica6-part2](https://anamahadevan.github.io/ica/ica6-part2)
 * [ica6-part3](https://anamahadevan.github.io/ica/ica6-part3)
-* ica7
-* ica8
-* ica9
-* ica10
-* ica11
-* ica12
-* ica13
-* ica14
-* ica15
 
 ## weekly assignments: 
 * [wa1](https://anamahadevan.github.io/wa/wa1)
@@ -36,11 +25,3 @@
 * [wa5](https://anamahadevan.github.io/wa/wa5)
 * [wa6](https://anamahadevan.github.io/wa/wa6)
 * [wa7](https://anamahadevan.github.io/wa/wa7)
-* wa8
-* wa9
-* wa10
-* wa11
-* wa12
-* wa13
-* wa14
-* wa15

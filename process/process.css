@@ -62,12 +62,24 @@ body {
         padding-top: 1em;
     }
 
+
+ /* index for textile blog */
+    .index{
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+    }
+
+    .index ul{
+     padding: 1em;
+     justify-content: space-around;
+    }
+
 /* article settings */
     .article{
         display: flex;
         justify-content: space-around;
         background-color: white;
-
 
     }
 

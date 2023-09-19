@@ -169,23 +169,24 @@
       <div class="tail"></div>
     </div>
   </div>
-    <button id="changeColorButton">change color</button>
+    <button id="colorbutton">change color</button>
 
     <script>
-        // get references to the DOM elements
+        // get references to elements in the DOM
         const box = document.getElementById('box');
-        const changeColorButton = document.getElementById('changeColorButton');
+        const cat = document.getElementById('cat');
+        const colorbutton = document.getElementById('colorbutton');
 
         // function to change the background color of the box
         function changeColor() {
             const colors = ['red', 'green', 'blue', 'yellow', 'purple'];
-            const randomColor = colors[Math.floor(Math.random() * colors.length)];
-            box.style.backgroundColor = randomColor;
-            cat.style.backgroundColor = randomColor;
+            const randomcolor = colors[Math.floor(Math.random() * colors.length)];
+            box.style.backgroundColor = randomcolor;
+            cat.style.backgroundColor = randomcolor;
         }
 
-        // function to toggle the text inside the box
-        function toggleText() {
+        // function to change the text inside the box
+        function changeText() {
             if (box.textContent === 'touch me') {
                 box.textContent = 'ooh!';
             } else {
@@ -194,9 +195,9 @@
         }
 
         // event listener to change text when click color box
-        box.addEventListener('click', toggleText);
+        box.addEventListener('click', changeText);
         //event listener to change color when click button
-        changeColorButton.addEventListener('click', changeColor);
+        colorbutton.addEventListener('click', changeColor);
     </script>
 </body>
 </html>

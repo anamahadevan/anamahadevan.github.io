@@ -1,25 +1,60 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple DOM example</title>
-
-        <!-- ----- CSS ------ -->
+    <title>DOM Interaction Example</title>
     <style>
-      
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(29, 29, 80);
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+        }
     </style>
+</head>
+<body>
+  <div id="box">
+    click me....
+    <div class="cat">
+      <div class="whiskers"></div>
+      <div class="face">
+        <div class="ear-l"></div>
+        <div class="ear-r"></div>
+      </div>
+      <div class="tag"></div>
+      <div class="tail"></div>
+    </div>
+  </div>
+    <button id="changeColorButton">change color</button>
 
-    <!-- ----- JAVASCRIPT ------ -->
     <script>
-        const link = document.querySelector("a");
-    </script>
+        // Get references to the DOM elements
+        const box = document.getElementById('box');
+        const changeColorButton = document.getElementById('changeColorButton');
 
-  </head>
-  <body>
-      <section>
-        <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
-        <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
-      </section>
-  </body>
+        // Function to change the background color of the box
+        function changeColor() {
+            const colors = ['red', 'green', 'blue', 'yellow', 'purple'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            box.style.backgroundColor = randomColor;
+        }
+
+        // Function to toggle the text inside the box
+        function toggleText() {
+            if (box.textContent === 'touch me') {
+                box.textContent = 'ooh!';
+            } else {
+                box.textContent = 'touch me';
+            }
+        }
+
+        // Event listeners
+        box.addEventListener('click', toggleText);
+        changeColorButton.addEventListener('click', changeColor);
+    </script>
+</body>
 </html>

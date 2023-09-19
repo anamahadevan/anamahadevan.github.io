@@ -20,7 +20,7 @@ section {
 
 /* helps separate sections */
   section:nth-child(even) {
-    background-color: teal;
+    background-color: rgb(0, 0, 0);
     color: white;
   }
 
@@ -28,8 +28,8 @@ section {
 /* ---- NAVIGATION -- S1--- */
 .section-1 {
 	display: flex;
-	/* background-image: url(/img/intro-bg.jpg);
-	background-repeat: no-repeat; */
+	background-image: url(/img/intro-bg.jpg);
+	background-repeat: no-repeat;
   }
 
 .main {
@@ -41,6 +41,8 @@ section {
 
 .main-nav li{
     list-style-type: none;
+    text-align: center;
+    justify-content: center;
 }
 
 /* ---- PROJECT GALLERY ---S1--- */

@@ -1,6 +1,11 @@
 
 /* ---- MAIN SETTINGS ----- */
 
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Montserrat&display=swap');
+
+*{
+  font-family: 'Fira Sans', sans-serif;
+}
 .main-wrapper{
     display:flex;
     overflow-x: scroll;
@@ -78,3 +83,44 @@ section {
     padding: 0.2rem 0;
 }
   
+/* ---- ABOUT ME ---S2--- */
+
+#about{
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  padding: 90px 0;
+  background: #eff4ff;
+  align-content: center;
+}
+/* profile picture LEFT */
+.selfie{
+  height: auto;
+  width:  302px;
+}
+
+/* full description RIGHT */
+.text{
+  width: 540px;
+  padding-left: 0.5em;
+}
+/* header */
+.text h2{
+  font-size: 90px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+/* title */
+.text h5{
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+span{
+  color: #4070f4;
+}
+.text p{
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}

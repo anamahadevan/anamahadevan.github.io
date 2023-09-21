@@ -13,8 +13,8 @@
 }
 
 /* consistent sizing for each function */
-section {
-    min-width: 50vw;
+.section {
+    min-width: 100vw;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -50,20 +50,22 @@ section {
     justify-content: center;
 }
 
-/* ---- PROJECT GALLERY ---S1--- */
+/* ---- PROJECT GALLERY ---S2--- */
 
 .gallery{
-    display: flex;
+  display: flex;
 	height: 100vh;
-    width: 35%;
+  width: 35%;
+  align-items: left;
+  justify-content: left;
 }
 
 /* vertically scrolling columns */
 .col{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
 }
 
  img {
@@ -83,7 +85,7 @@ section {
     padding: 0.2rem 0;
 }
   
-/* ---- ABOUT ME ---S2--- */
+/* ---- ABOUT ME ---S3--- */
 
 #about{
   display: flex;

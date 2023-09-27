@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> assignment #2 </title>
+
+    <script>
+    function print() {
+        document.getElementById('display').innerHTML = 
+                    document.getElementById("input").value;
+                    document.getElementById("name").value;
+    }
+    </script>
+
+</head>
+<body>
+    <!-- 
+Use at least three <input> tags other than the button with different types Links to an external site..
+In addition, use at least one of the following other form controls:
+<textarea>
+<select> and <option>
+<datalist> and <option>
+<progress> or <meter>
+There must be at least one <form> tag in the page that is a parent to all of the form control tags.
+     -->
+
+ <form>
+    <label><b>nombre:</b></label><br>
+    <input type="text" name="name" id="input"><br><br>
+<!-- 
+    <label for="name">nombre:</label>
+    <input type="text" id="input" name="name" required><br> -->
+
+    <label for="age">years alive:</label>
+    <input type="number" id="age" name="age" min="1" max="69"><br><br>
+
+    <label for="gender"><b>gender:</b></label><br>
+    <select id="gender" name="gender">
+        <option value="male">[Redacted]</option>
+        <option value="female">Girl</option>
+        <option value="other">They</option>
+    </select><br>
+    
+    <label><b>Enter a Message</b></label>
+    <input type="text" name="message" id="input">
+
+  </form>
+
+  <!--  Use at least one <button> tag or <input type="submit">.  -->
+  <input type="button" onclick="print()" value="submit" />
+  <label>Your input: </label>
+  <p><span id='display'></span></p>
+
+</body>
+</html>

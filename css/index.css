@@ -353,6 +353,10 @@ article .icon {
   cursor: default;
 }
 
+ul{
+  list-style-type: none;
+}
+
 /* PROJECTS SECTION */
 
 #projects {

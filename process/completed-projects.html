@@ -53,30 +53,73 @@
             I knew it would have to be a laser. 
           </p>
           <ul>
-            <li><img src="/process/front-assets/inspo.png" alt=""></li>
+            <li><img src="/process/project-assets/cat1wire.jpg" alt=""></li>
+            <li><img src="/process/project-assets/cat1code.png" alt=""></li>
          </ul>
           <p>
-            <strong> First Process Note:</strong> 
-            During the first iteration I made a little tower with a laser on a
-            servo motor that would move when she came in front of my PIR sensor.
-             I chose to use PIR, because as I was researching sonic detection I
-             found out they have trouble seeing cats. This ending up being a 
-             questionable choice though because it is a quite finicky piece of 
-             hardware (here).
+            <strong> First Iteration:</strong> 
+            I wanted the toy to turn on when the object detected her in front of it
+            and I realized I would need a sensor of some kind. As I was researching
+             sonic detection versus PIR I found out that sonic sensors have trouble seeing 
+             cats because of their fur. Although the PIR sensor seemed like the obvious
+            choice, it presented it's own set of issues due to it being quite a finicky 
+            piece of hardware.
           </p>
 
           <ul>
-            <li><img src="/process/front-assets/mile1a.jpg" alt=""></li>
+            <li><img src="/process/project-assets/cat1.mov" alt=""></li>
+          </ul>
+
+          <p> When trying to decide how to project the laser out onto the 
+            floor I ended up opting to make a turret like design with a PIR
+            sensor at the front perpendicular a my servo motor with the laser 
+            taped to it.
+          </p>
+
+          <ul>
+            <li><img src="/process/project-assets/cat1final.jpg" alt""></li>
           </ul>
 
           <p>
-            <strong>Issues:</strong> 
-           Pretty immediately I have come to the problem of spacing and placement, 
-           when I tried to implement a gallery wall I had seen documentation for it 
-           completely broke the spacing of everything else. 
+            <strong> Issues:</strong> 
+           This was my first time woodworking, and soldering so there was a 
+           lot of mistakes to be made and a lot to be learned. On the software
+           side of things, coding the motor, laser, and sensor to work
+           in unsion together was a bit of a struggle. Ultimately my biggest
+           issue with my design was how top heavy the tower was, it was easy for
+           my little gremlin to knock it over and effectively pull out all of the wires
+           from the arduino 
          </p>
+         <ul>
+            <li><img src="/process/project-assets/cat1.mp4" alt""></li>
+        </ul>
+
+          <p>
+            <strong> Second Iteration:</strong> 
+            In my second take, in designing the enclosure there were a couple 
+            critiques I wanted to address. Mainly, the stability and having
+            better protection for the actual laser from the cat who might try 
+            to eat it. This was a bit more difficult so I switched up my enclosure.
+          </p>
+
+          <ul>
+            <li><img src="/process/project-assets/cat2box.jpg" alt""></li>
+          </ul>
+
+          <p>
+            I hacked a laser I had found at the thrift store and decided to keep the 
+            motor and the actual light. 
+            
+            It used 
+            the enclosure and used a mirror to reflect it out to the cat. In terms of coding, DC1 was relatively simple: the code just connected the laser to a servo and made it move in certain angles. Since I upgraded to a DC motor in DC2 it was a great opportunity to make things more interactive for the cat. Now, the rotation changes and is random as the cat plays more ( using the random() function!! ). The new motor also enables more motion (around and up and down). I feel a lot better with the final product, but as I went through the redesigning process there was so many things I wish I had extra time / resources to re-do. 
+          </p>
+
+          <ul>
+            <li><img src="/process/project-assets/cat2.mp4" alt""></li>
+          </ul>
+
          <p>
-            <strong>Plan:</strong> 
+            <strong>Reflection:</strong> 
            Below are sketches that lay out what I plan to attempt to code
         </p>
           <ul>
@@ -84,55 +127,6 @@
           </ul>
        
       </article>
-
-      <article class="blog-format">
-        <h3 id = "animation"> Milestone Two: Class Portal</h3>
-        
-        <p><strong>Links :</strong>
-          <a href="https://github.com/anamahadevan/anamahadevan.github.io">to github</a>
-          <a href="https://anamahadevan.me/new">to class portal</a>
-        </p>
-       
-        <p>
-          <strong> First Process Note:</strong> 
-          When I began to create my portal I wanted to make sure I was hand coding every function
-         that I had planned in the previous milestone, without following any other code. This ended 
-         up helping me, as since the javascript I wrote was just a simpler version for my needs I 
-         was able to significantly reduce the amount of code I needed. <br><br>
-         <ul>
-          <li><img src="/process/front-assets/.png" alt=""></li>
-       </ul>
-        <strong>Process Note Two:</strong>
-         As mentioned in Milestone One, I really want to focus on the movement and 
-          aesthetics of the site, but I do need for the assignments to be navigable. 
-          I have been debating whether I should do entries in my process blog that link to arbitrary 
-          areas of my class portal, or to implement anything for my overall portfolio. 
-        </p>
-
-        <ul>
-          <li><img src="/process/front-assets/.jpg" alt=""></li>
-        </ul>
-
-        
-        Documentation in your process blog of the process you went through creating your portal.
-        Describe any problems or roadblocks you encountered and how you resolved them. 
-        Talk about any lessons learned of what worked and what you'd do differently next time.
-         And don't forget to link to any out-of-class resources that you used to help create
-          the portal.
-
-        <p>
-          <strong>Issues:</strong> 
-         As I actually begin to code my class portal and flesh things out, I am struggling to
-         create in css and html what I plan in Figma and on paper. Positioning and having foresight
-         to know what to code first / layer where has been challenging
-       </p>
-       <p>
-      </p>
-        <ul>
-          <li><img src="/process/ext-assets/.jpg" alt=""></li>
-        </ul>
-     
-    </article>
 
 
 

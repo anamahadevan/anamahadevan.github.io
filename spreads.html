@@ -2,39 +2,156 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<div class="thumbs">
-        <a href="#target1"><img src='https://images.unsplash.com/photo-1679581858563-3c808d23f0fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODE0OTMyMjM&ixlib=rb-4.0.3&q=80&w=400' alt=''></a>
-        <a href="#target2"><img src='https://images.unsplash.com/photo-1680925723180-ff3cb559c9b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODE0OTMyMjM&ixlib=rb-4.0.3&q=80&w=400' alt=''></a>
-        <a href="#target3"><img src='https://images.unsplash.com/photo-1508849789987-4e5333c12b78?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODE0OTQ0MDQ&ixlib=rb-4.0.3&q=80&w=400' alt=''></a>
-      </div>
-      
-      <div class="lightbox">
-        <div class="target" id="target1">
-          <span>
-            <!-- spacer to keep content centered in the flex container -->
-          </span>
-          <div class="content">
-            <img src='https://images.unsplash.com/photo-1679581858563-3c808d23f0fc?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODE0OTMyMjM&ixlib=rb-4.0.3&q=85' alt=''>
-          </div>
-          <a href="#target2" class="fas fa-chevron-right nav" title="next"></a>
-        </div>
-        <div class="target" id="target2">
-          <a href="#target1" class="fas fa-chevron-left nav" title="previous"></a>
-          <div class="content"><img src='https://images.unsplash.com/photo-1680925723180-ff3cb559c9b4?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODE0OTMyMjM&ixlib=rb-4.0.3&q=85' alt=''></div>
-          <a href="#target3" class="fas fa-chevron-right nav" title="next"></a>
-        </div>
-        <div class="target" id="target3">
-          <a href="#target2" class="fas fa-chevron-left nav" title="previous"></a>
-          <div class="content"><img src='https://images.unsplash.com/photo-1508849789987-4e5333c12b78?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODE0OTQ0MDQ&ixlib=rb-4.0.3&q=85' alt=''></div>
-          <span>
-            <!-- spacer to keep content centered in the flex container -->
-          </span>
-        </div>
-        <a href="#!" class="fas fa-times close nav"></a>
-      </div>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    * {
+	box-sizing: border-box;
+	}
+
+	body {
+		font-family: Lato, sans-serif;
+		margin: 0;
+		padding: 1rem;
+		min-height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: rgb(255, 255, 255);
+	}
+
+	img {
+		width: 100%;
+		display: flex;
+		aspect-ratio: 1 / 1;
+		object-fit: cover;
+		transition: transform 1000ms;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: grid;
+		gap: 0.5rem;
+		grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+		max-width: 100%;
+		width: 70rem;
+	}
+
+	figure {
+		margin: 0;
+		position: relative;
+		overflow: hidden;
+	}
+
+	figure::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 200%;
+		height: 200%;
+		background: rgba(0, 0, 0, 0.5);
+		transform-origin: center;
+		opacity: 0;
+		transform: scale(2);
+		transition: opacity 300ms;
+	}
+
+	figcaption {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		place-items: center;
+		text-align: center;
+		padding: 1rem;
+		color: white;
+		font-size: 1.2rem;
+		z-index: 1;
+		opacity: 0;
+		transition: opacity 600ms, transform 600ms;
+	}
+
+	a:is(:hover, :focus) figure::after {
+		opacity: 1;
+	}
+
+	a:is(:hover, :focus) figcaption {
+		opacity: 1;
+		transition: opacity 600ms;
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		figcaption {
+			transform: translate3d(0, 2rem, 0);
+		}
+		
+		figure::after {
+			border-radius: 50%;
+			opacity: 1;
+			transform: scale(0);
+			transition: transform 900ms;
+		}
+		
+		a:is(:hover, :focus) figure::after {
+			transform: scale(2.5);
+		}
+
+		a:is(:hover, :focus) figcaption {
+			opacity: 1;
+			transform: translate3d(0, 0, 0);
+			transition: opacity 600ms 400ms, transform 600ms 400ms;
+		}
+
+		a:is(:hover, :focus) img {
+			transform: scale(1.2);
+		}
+	}
+    </style>
 </head>
 <body>
+
+    <ul>
+        <li>
+            <a href="">
+                <figure>
+                    <img src='/img/portfolio/spread4.jpg'>
+                    <figcaption>Mountains and volcanos</figcaption>
+                </figure>
+            </a>
+        </li>
+        </li>
+        <li>
+            <a href="">
+                <figure>
+                    <img src='/img/portfolio/spread5.jpg'>
+                    <figcaption>Forest escapes</figcaption>
+                </figure>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <figure>
+                    <img src='/img/portfolio/spread3.jpg'>
+                    <figcaption>Hiking trails</figcaption>
+                </figure>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <figure>
+                    <img src='/img/portfolio/spread1.pngx'>
+                    <figcaption>Street scenes</figcaption>
+                </figure>
+            </a>
+        </li>
+ 
+    </ul>
     
 </body>
 </html>

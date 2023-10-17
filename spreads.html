@@ -23,7 +23,7 @@
 	img {
 		width: 100%;
 		display: flex;
-		aspect-ratio: 1 / 1;
+		/* aspect-ratio: 1 / 1; */
 		object-fit: cover;
 		transition: transform 1000ms;
 	}
@@ -113,15 +113,48 @@
 		}
 	}
     </style>
+	<link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/mediaqueries.css" />
 </head>
+
 <body>
 
+	<div>
+		<nav id="desktop-nav">
+			<div class="logo">Ana Mahadevan</div>
+			<div>
+			  <ul class="nav-links">
+				<li><a href="#about">about</a></li>
+				<li><a href="#experience">experiences</a></li>
+				<li><a href="#projects">projects</a></li>
+				<li><a href="#contact">contact</a></li>
+			  </ul>
+			</div>
+		  </nav>
+		  <nav id="hamburger-nav">
+			<div class="logo">ana mahadevan</div>
+			<div class="hamburger-menu">
+			  <div class="hamburger-icon" onclick="toggleMenu()">
+				<span></span>
+				<span></span>
+				<span></span>
+			  </div>
+			  <div class="menu-links">
+				<li><a href="#about" onclick="toggleMenu()">About</a></li>
+				<li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+				<li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+				<li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+			  </div>
+			</div>
+		  </nav>
+		</div>
+	<div>
     <ul>
         <li>
             <a href="">
                 <figure>
                     <img src='/img/portfolio/spread4.jpg'>
-                    <figcaption>Mountains and volcanos</figcaption>
+                    <figcaption>Divine Femenine for VOL.VIII : Gossamer</figcaption>
                 </figure>
             </a>
         </li>
@@ -130,7 +163,7 @@
             <a href="">
                 <figure>
                     <img src='/img/portfolio/spread5.jpg'>
-                    <figcaption>Forest escapes</figcaption>
+                    <figcaption>Divine Femenine for VOL.VIII : Gossamer</figcaption>
                 </figure>
             </a>
         </li>
@@ -138,7 +171,7 @@
             <a href="">
                 <figure>
                     <img src='/img/portfolio/spread3.jpg'>
-                    <figcaption>Hiking trails</figcaption>
+                    <figcaption>Plastic for VOL.VIII : Gossamer</figcaption>
                 </figure>
             </a>
         </li>
@@ -146,12 +179,13 @@
             <a href="">
                 <figure>
                     <img src='/img/portfolio/spread1.png'>
-                    <figcaption>Street scenes</figcaption>
+                    <figcaption>Pretty Hurts for VOL.VII : Bedlam</figcaption>
                 </figure>
             </a>
         </li>
  
     </ul>
+	</div>
     
 </body>
 </html>

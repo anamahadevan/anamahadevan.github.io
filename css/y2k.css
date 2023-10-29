@@ -1,0 +1,42 @@
+
+/* ----  body  ---- */
+
+body {
+    background-image: url(/img/y2k/beach2.gif);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* background-color: #FFBCD9; */
+   }
+
+
+
+/* ----   nav bar ---- */
+
+.nav{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-item{
+    padding: 1em;
+}
+
+.nav {
+    color:#ff2483
+}
+
+.nav a:link {
+    color: rgb(16, 174, 161);
+  }
+
+.nav a:visited {
+    color: rgb(0, 255, 204);
+  }
+  
+.nav-icon {
+    width:5em;
+    height:auto;
+}

@@ -69,7 +69,7 @@
 <!-- /// game /// -->
 
 
-<div class="window" id="digiwindow">
+<div class="window" id="digipet">
     <div class="title-bar">
         <div class="title-bar-text"> digipet.exe </div>
         <div class="title-bar-controls">
@@ -93,16 +93,66 @@
 <!-- /// float side /// -->
 
 <div class="float">
-
     <div class="bubble">
+        <mark>aNA sAyS :</mark>
         <div class="bubble-text"> don't be mean <br> to me during critique i might die </div>
     </div>
 
     <img src="https://cdn.everskies.com/render/WzEyMDU3MCw1MzU1OTYsMzI2NDc5LDIxMDI2MzIsNTcsNDY2OTAyLDQzNDU4NCwyNTA0MSwyMjQxMTcsNDE5OTM4LDE3OTQ3OSwxMjA1ODIsMjI5NTg0LC0zLDEwMzk5NywxOTgzNjcwXQ.png" id="floater" >
-
 </div>
 
 
+<!-- /// music player /// -->
+
+<div class="window" id="mp3">
+    <div class="title-bar">
+        <div class="title-bar-text"> Windows Media Player </div>
+        <div class="title-bar-controls">
+            <button aria-label="Minimize"> - </button>
+            <button aria-label="Maximize"> +</button>
+            <button aria-label="Close">x</button>
+        </div>
+    </div>
+    <img id="mp3-pic" src="https://i.pinimg.com/originals/26/6e/c0/266ec0e07ea3f1221d3e5c849c5c7a94.gif"></img>
+
+    <div id="musicplayer">
+        <div>
+        <ul class="current-song">
+            <marquee scrollamount="8" id="song-title">currently only playing bladee songs</marquee>
+        </ul>
+        </div>
+
+        <table class="song">
+            <tbody><tr>
+     
+                <td>
+                <button>
+                    <div class="prev-track" onclick="prevTrack()"><i class="fas fa-backward" aria-hidden="true"></i></div>
+                </button>
+                </td>
+                
+                <td>
+                <button>
+                    <div class="playpause-track" onclick="playpauseTrack()"><i class="fas fa-play" aria-hidden="true"></i></div>
+                </button>               
+                </td>
+                
+                <td>
+                <button>
+                    <div class="next-track" onclick="nextTrack()"><i class="fas fa-forward" aria-hidden="true"></i></div>
+                </button>
+                </td>
+            </tr> </tbody>
+        </table>
+        <div class="seeking">
+            <div class="current-time">0:00</div>
+ 
+            <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+ 
+            <div class="total-duration">4:12</div>
+        </div>
+        </div>
+</div>
 
 
 

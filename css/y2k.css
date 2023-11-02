@@ -2,12 +2,18 @@
 /* ----  body  ---- */
 
 body {
+    /* background settings */
     background-image: url(/img/y2k/beach2.gif);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    /* background-color: #FFBCD9; */
+    -webkit-font-smoothing: none;
+    /* font settings */
+    font-family: "Pixelated MS Sans Serif",Arial;
+    font-size: 1em;
+    /* cursor settings */
+    cursor: url(/img/y2k/bubblecursor.gif), auto;
    }
 
 
@@ -18,25 +24,204 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
+    max-height: fit-content;
 }
 
 .nav-item{
-    padding: 1em;
+    padding: 0.2em;
 }
-
-.nav {
-    color:#ff2483
-}
-
 .nav a:link {
-    color: rgb(16, 174, 161);
+    color: rgb(0, 255, 234);
   }
 
 .nav a:visited {
-    color: rgb(0, 255, 204);
+    color: rgb(0, 234, 255);
   }
   
 .nav-icon {
-    width:5em;
+    width:4em;
     height:auto;
 }
+
+/* ----   bottom scroll bar  ---- */
+
+.bottom-bar{
+    display:flex;
+    flex-direction: row;
+    height:1.5em;
+    width: 100%;
+    visibility: visible;
+    background: rgb(148, 237, 255); 
+    border: 2px inset rgb(172, 252, 255); 
+    color: rgb(156, 214, 246); 
+    text-shadow: rgb(72, 150, 199) -0.5px 0px, rgb(255, 112, 174) 0px 0.5px, rgb(255, 112, 174) 0.5px 0px, rgb(255, 112, 174) 0px -0.5px; 
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.button, input[type=reset], input[type=submit] {
+    height:auto;
+    background: #bff3fb;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
+    border: none;
+    border-radius: 0;
+    box-sizing: border-box;
+    min-height: 23px;
+    max-width: 75px;
+    padding-left: 1;
+    text-shadow: 0 0 #2acdf2;
+}
+
+#crawl-box {
+    visibility: visible;
+    padding: 0px;
+    width: 100%;
+    background: rgb(209, 245, 255);
+    border: 2px
+ inset rgb(255, 221, 236);
+    color: rgb(137, 225, 255);
+    height: 22px;
+    position: relative;
+    overflow: hidden;
+}
+
+#crawl-inner {
+    position: absolute; 
+    left: -2940px; 
+    white-space: nowrap; 
+    top: 1px;
+    overflow: hidden;
+    
+}
+
+#crawl-text{
+    text-shadow: rgb(125, 19, 65) -0.5px 0px, rgb(255, 112, 174) 0px 0.5px, rgb(255, 112, 174) 0.5px 0px, rgb(255, 112, 174) 0px -0.5px;
+}
+
+#clock{
+    border:2px ridge #ffddec;
+    box-shadow: inset -1px -1px #dfdfdf, inset 1px 1px grey;
+    flex-grow: 10;
+    margin: 0;
+    paddinf
+}
+
+
+/* ----   window (title bar + status bar)  ---- */
+
+.window {
+    background: #d6efff;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
+    padding: 3px;
+    width: fit-content;
+    height: fit-content;
+    -webkit-font-smoothing: none;
+    font-family: "Pixelated MS Sans Serif",Arial;
+    font-size: 11px;
+}
+
+.title-bar{
+    align-items: center;
+    background: linear-gradient(90deg, #24bdff,#70f3ff,#bcf4ff);
+    display: flex;
+    width: fit-content;
+    justify-content: space-between;
+    padding: 3px 2px 3px 3px;
+}
+
+.title-bar-text {
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+.title-bar-controls {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    padding-left: 18em;
+}
+
+.title-bar-controls button{
+    min-height: 1.5em;
+    min-width: 1.5em;
+    font-size: 1.1em;
+    padding: 0;
+    background: #d6f6ff;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
+}
+
+.status-bar{
+    display: flex;
+    flex-direction: row;
+    background: #d6f7ff;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
+    padding: 3px;
+    gap: 1px;
+    margin: 0 1px;
+}
+
+.status-bar-field{
+    box-shadow: inset -1px -1px #dfdfdf, inset 1px 1px grey;
+    flex-grow: 1;
+    margin: 0;
+    padding: 2px 3px;
+}
+
+
+/* ----   digipet window  ---- */
+
+.digipet{
+    background: #ceebff;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
+    padding:0.3em;
+    width: 28em;
+    height:  23em;
+}
+
+#digipet-exe{
+    width:100%;
+    height:23em;
+}
+
+
+/* ----  float bubble and girl  ---- */
+
+
+.float{
+    position: fixed;
+    right: 5.5em;
+    bottom: 20em;
+    
+}
+
+.bubble{
+    padding: 1em;
+    display: inline-block;
+    text-align: center;
+    line-height: 1.5em;
+    background: linear-gradient(#2ea8ff, #d6ebff);
+    box-shadow: 0 -2px #bcedff, 0 -4px #2499ff, 2px 0 #bce1ff, 2px -2px #2474ff, 4px 0 #247fff, 0 2px #bce5ff, 0 4px #24bdff, -2px 0 #bce4ff, -2px 2px #24d3ff, -4px 0 #24deff, -2px -2px #24d3ff, 2px 2px #24a7ff, 2px 8px rgba(0, 0, 0, 0.1), 8px 2px rgba(0, 0, 0, 0.1), 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bubble-text{
+    font-size: 20px;
+    line-height: 1.5em;
+    font-family: "Pixelated MS Sans Serif",Arial;
+}
+
+#floater{
+    position: fixed;
+    right: 0.8em;
+    bottom: 4em;
+    animation: floater 10s infinite;
+    transition: ease 0.5s;
+    filter: drop-shadow(1px 1px 0 gray) drop-shadow(-1px 1px 0 #fff) drop-shadow(0 2px 0 #fdc0df) drop-shadow(0 -1px 0 #fff) drop-shadow(0 1px 1.5px #ffbcd9) drop-shadow(0 -1px 1.5px #ffddec) drop-shadow(1px -1px 1.5px #f6daf0) drop-shadow(-1px -1px 1.5px #fee9f2);
+}
+
+@keyframes floater {
+    0%{transform: translateY(-5%);transition: ease 1.5s;}
+    50%{transform: translateY(5%);transition: ease 1.5s;}
+  }

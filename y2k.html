@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> y2k world </title>
     <link rel="stylesheet" href="/css/y2k.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
+
 <body>
 
 <!-- /// side navigation /// -->
@@ -13,7 +15,7 @@
 
     <div class= "nav-item">
         <br>
-            <a href="anamahadevan.me">
+            <a href="https://anamahadevan.me">
                 <img class="nav-icon" src="/img/y2k/miffy.png">
                 <br> home ☆ <br>
             </a>
@@ -21,7 +23,7 @@
 
     <div class= "nav-item">
         <br>
-            <a href="anamahadevan.me">
+            <a href="https://anamahadevan.me/#about">
                 <img class="nav-icon" src="/img/y2k/cherry.png">
                 <br> about ★ <br>
             </a>
@@ -29,65 +31,83 @@
 
     <div class= "nav-item">
         <br>
-            <a href="anamahadevan.me">
+            <a href="https://anamahadevan.me/#experience">
                 <img class="nav-icon" src="/img/y2k/shell.png">
-                <br> home ☆ <br>
+                <br> work ☆ <br>
             </a>
     </div>
 
     <div class= "nav-item">
         <br>
-            <a href="anamahadevan.me">
+            <a href="https://www.linkedin.com/in/ana-mahadevan-4ab433199/">
                 <img class="nav-icon" src="/img/y2k/ghost.png">
-                <br> about ★ <br>
+                <br> linkedin ★ <br>
             </a>
     </div>
 </div>
 
 <!-- /// side navigation /// -->
 
-<div id="taskbar">
-    <div id="eek" class="bubble shadow mini right" style="width:200px;min-height: 100px;"> <span id="aboutOutput"> <mark>DiGi-GAL</mark> <br> Zzzzz </span> </div>
-    <img src="https://i.imgur.com/8a3cJAe.png" id="aboutBtn" style="position:fixed;right:0px;bottom:45px">
+<div class="bottom-bar">
+     <!-- start button -->
+     <button type="button" class="button"> start </button>
+
     
-    <div class="window" style="height:25px;width:2000px">
-    <button><strong> Start </strong></button>
-    <div id="crawl">
-    <div class="marquee1" style="overflow: hidden;">
-        <div style="visibility: visible; padding: 0px; width: 1000px; background: rgb(255, 239, 249); border: 2px inset rgb(255, 221, 236); color: rgb(255, 137, 188); text-shadow: rgb(255, 112, 174) -0.5px 0px, rgb(255, 112, 174) 0px 0.5px, rgb(255, 112, 174) 0.5px 0px, rgb(255, 112, 174) 0px -0.5px; height: 22px; position: relative; overflow: hidden;">
-            <div style="position: absolute; left: -2808px; white-space: nowrap; top: 1px;">&nbsp;As of February 14th 2006, the <mark> decoden </mark> series has been discontinued due to multiple reports of a hostile virus named 'CocoDulce' corrupting our products. Faults to look out for include 
-                <strong> human-like sentience </strong> from your uniquely assigned 
-                <mark>DiGi-GAL</mark>, <strong> symptoms of narcolepsy in older systems </strong>, and a minor bug in which your <strong>interface appears pink</strong>. Any occurrences should be reported immediately to ###### and in order to prevent such cases please make sure to ### at #####.</div><div style="position: absolute; left: 265px; white-space: nowrap; top: 1px;">&nbsp;As of February 14th 2006, the <mark> decoden </mark> series has been discontinued due to multiple reports of a hostile virus named 'CocoDulce' corrupting our products. Faults to look out for include <strong> human-like sentience </strong> from your uniquely assigned <mark>DiGi-GAL</mark>, <strong> symptoms of narcolepsy in older systems </strong>, and a minor bug in which your <strong>interface appears pink</strong>. Any occurrences should be reported immediately to ###### and in order to prevent such cases please make sure to ### at #####.</div></div></div>
-    <script type="text/javascript">
-    marqueeInit({
-        uniqueid: 'mycrawler',
-        style: {
-            'padding': '0px',
-            'width': '1000px',
-            'background': '#ffeff9',
-            'border':'2px inset #ffddec',
-            'color':'#ff89bc',
-            'text-shadow': '-0.5px 0 #ff70ae, 0 0.5px #ff70ae, 0.5px 0 #ff70ae, 0 -0.5px #ff70ae'
-        },
-        inc: 4, //speed - pixel increment for each iteration of this marquee's movement
-        mouse: 'cursor driven', //mouseover behavior ('pause' 'cursor driven' or false)
-        moveatleast: 2,
-        neutral: 150,
-        persist: false,
-        savedirection: true
-    });
-    </script>
+    <div class = "crawl-box">
+        <div class = "crawl-inner"> 
+           <p> here here here here and im losing my mind slowly ha ha ha ha hahahha </p>
+        </div>
     </div>
-    <div id="timez" class="status-bar">
-        <div class="window"><strong> <p class="status-bar-field" id="clock" style="border:2px ridge #ffddec;">11:36:20 AM</p> </strong></div>
-    </div>
-    </div>
+     
+
+    <div class = "time">
+        <p id="clock">1:35:40 AM</p> </strong>
     </div>
 
+</div>
+
+<!-- /// game /// -->
+
+
+<div class="window" id="digiwindow">
+    <div class="title-bar">
+        <div class="title-bar-text"> digipet.exe </div>
+        <div class="title-bar-controls">
+            <button aria-label="Minimize"> - </button>
+            <button aria-label="Maximize"> +</button>
+            <button aria-label="Close">x</button>
+        </div>
+    </div>
+    
+    <div class="digipet">
+        <iframe id="digipet-exe" scrolling="no" src="https://gifypet.neocities.org/pet/pet.html?name=kiki&dob=1698852871&gender=f&element=Air&pet=https%3A%2F%2Fgifs4crds.carrd.co%2Fassets%2Fimages%2Fgallery02%2F7326dcdd.gif%3Fvca07fc73a&map=https%3A%2F%2Fi.pinimg.com%2F564x%2Fbd%2F8b%2F99%2Fbd8b99006e7973ce567a75219b72773d.jpg&background=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fd0%2F44%2F36%2Fd04436335c516adf0ec8cd1e5093b1db.gif&tablecolor=white&textcolor=white" frameborder="0"></iframe>
+    </div>
+
+    <div class="status-bar">
+        <p class="status-bar-field">Press F1 for help</p>
+        <p class="status-bar-field">CPU Usage: 77.7%</p>
+    </div>
+</div>
+
+
+<!-- /// float side /// -->
+
+<div class="float">
+
+    <div class="bubble">
+        <div class="bubble-text"> don't be mean <br> to me during critique i might die </div>
+    </div>
+
+    <img src="https://cdn.everskies.com/render/WzEyMDU3MCw1MzU1OTYsMzI2NDc5LDIxMDI2MzIsNTcsNDY2OTAyLDQzNDU4NCwyNTA0MSwyMjQxMTcsNDE5OTM4LDE3OTQ3OSwxMjA1ODIsMjI5NTg0LC0zLDEwMzk5NywxOTgzNjcwXQ.png" id="floater" >
+
+</div>
 
 
 
 
-    <script src="/js/y2k.js"></script>
+
+
+    
+<script src="/js/y2k.js"></script>
 </body>
 </html>

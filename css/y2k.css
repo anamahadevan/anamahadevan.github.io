@@ -317,3 +317,12 @@ mark{
     justify-content: space-evenly;
     padding: 0.5em;
 }
+
+
+  /* ----  key chain  ---- */
+ .keychain{
+    position: fixed;
+    right:0em;
+    top:0em;
+    max-height: 10%;
+ }

@@ -178,6 +178,34 @@
     <p>
       <strong> Step 1: Break the UI into a component hierarchy </strong> 
 
+      <ul>
+        <li><img src="/process/front-assets/todo.png" alt=""></li>
+      </ul>
+
+      1. Screen: parent container for all components 
+      2. TaskStatus : sorts through tasks (current/completed)
+      3. AddTask: add a new task, state current 
+      4. ToggleStatus: change whether task current is true 
+    </p>
+
+    <p>
+      <strong> Step 2: Find the minimal but complete representation of UI state </strong> 
+      1. Screen:static, not state
+      2. TaskStatus : is state, changes based on ToggleStatus
+      3. AddTask: adds to array, changes
+      4. ToggleStatus: is state, changes status 
+
+    </p>
+
+    <p>
+      <strong> Step 3: Identify where your state should live       </strong> 
+
+      1. TaskStatus : changes view to show different task statuses
+      2. AddTask: changes view to add a new task
+      3. ToggleStatus: checks and unchecks box
+
+      Parent seems to be TaskStatus, so I would store there.
+
     </p>
 1
  

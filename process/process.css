@@ -114,13 +114,14 @@ body {
     .article{
         display: flex;
         justify-content: space-around;
-        background-color: white;
+        background-color: rgb(255, 255, 255);
 
     }
 
     .blog-format {
+        background-color: rgb(255, 255, 255);
         justify-content: space-around;
-        padding: 2em;
+        padding: 1em;
     }
 
 
@@ -156,3 +157,4 @@ body {
         height: 70vh;
         object-fit: cover;
     }
+   

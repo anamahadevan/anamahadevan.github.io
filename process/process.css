@@ -160,4 +160,8 @@ body {
         height: 70vh;
         object-fit: cover;
     }
+
+    .li{
+       height: 1em;
+    }
    
